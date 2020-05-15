@@ -35,48 +35,41 @@
   border-radius: 25px;
 }
 .submit_btn{
-  width: 100px;
-  heigth: 50px;
-  background: linear-gradient(to right,blue,navy);
-  border-radius: 25px;
-  color: white;
+  border: 2px solid blue;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 10px;
+  background: white;
+  color: blue;
   text-align: center;
+  width: 100px;
+  height: 40px;
+
 }
 .question_disagree_button{
-	border: 0px;
+	border: 2px solid red;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 25px;
 	border-bottom-left-radius: 25px;
 	border-bottom-right-radius: 10px;
-	color: white;
+  background: white;
+	color: red;
 	text-align: center;
 	padding: 15px;
-	position: relative;
-	left: 10px;
 	width: 100px;
 	height: 60px;
 }
 .question_agree_button{
-	border: 0px;
+	border: 2px solid green;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 25px;
 	border-bottom-left-radius: 25px;
 	border-bottom-right-radius: 10px;
-	background: linear-gradient(to bottom right,blue,navy);
+	background: white;
+  color: green;
 	text-align: center;
 	padding: 15px;
-	position: relative;
-	right: 10px;
 	width: 100px;
 	height: 60px;
-}
-.index_button_box{
-	width: 100px;
-	height: 100px;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
 }

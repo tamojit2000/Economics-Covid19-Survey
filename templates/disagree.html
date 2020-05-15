@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <title>Disagree</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="../static/my_js.js"></script>
+    <link href="../static/my_css.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div class="header" id="myHeader">
+      <h2>A draft questionnaire for Household Survey on Covid-19 Pandemic in India.</h2>
+    </div>
+
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+
+
+    <form action="submit_disagree" method="post">
+
+      <div class="section">
+        <label>
+          1.	Number of People presently in the household (please include all, including small children)
+          <input type="number"  required name="Resident1" />
+        </label>
+      </div>
+
+      <div class="section">
+        <label>
+          2.	Number of people, if any, not a usual resident but presently staying in the household
+          <input type="number"  required name="Resident2" />
+        </label>
+      </div>
+
+      <div class="section">
+        <label>
+          3. Annual family income of household from all sources in rupees:
+
+          </br>
+          <input type="radio" required name="Income" value="< 5 lakhs" />
+          <label>less than 5 lakhs</label>
+
+          </br>
+          <input type="radio" required name="Income" value="5 – 10 lakhs" />
+          <label>5 – 10 lakhs</label>
+
+          </br>
+          <input type="radio" required name="Income" value="10 – 15 lakhs" />
+          <label>10 – 15 lakhs</label>
+
+          </br>
+          <input type="radio" required name="Income" value="15 – 20 lakhs" />
+          <label>15 – 20 lakhs</label>
+
+          </br>
+          <input type="radio" required name="Income" value="> 20 lakhs" />
+          <label>20 lakhs and above</label>
+
+          </br>
+          <input type="radio" required name="Income" value="Do not disclose" />
+          <label>Do not wish to disclose</label>
+
+        </label>
+      </div>
+
+      <div class="section">
+        <label>4. Kindly please state your reason for not accepting the survey.</label>
+        <select class="" name="Reason">
+          <option value="Not interested">Not interested</option>
+          <option value="Will take too much time">Will take too much time</option>
+          <option value="My reason is not present">My reason is not present</option>
+
+        </select>
+      </div>
+    </br>
+    </br>
+      <center>
+        <input type="submit" value="SUBMIT" class="submit_btn" />
+      </center>
+
+
+    </form>
+
+  </body>
+</html>
