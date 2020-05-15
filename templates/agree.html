@@ -1,0 +1,916 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="/./static/my_js.js"></script>
+    <link href="../static/my_css.css" rel="stylesheet" type="text/css">
+    <title>Survey</title>
+  </head>
+  <body>
+    <div class="header" id="myHeader">
+      <h2>A draft questionnaire for Household Survey on Covid-19 Pandemic in India.</h2>
+    </div>
+
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+
+    <form action="/submit" method="post">
+
+    <div class="section">
+      <label>
+        Enter Email for follow up:
+        <input type="email" required name="Email">
+      </label>
+    </div>
+
+    <div class="section">
+      <label>
+        1.	Number of People presently in the household (please include all, including small children)
+        <input type="number"  required name="Resident1" />
+      </label>
+    </div>
+
+    <div class="section">
+      <label>
+        2.	Number of people, if any, not a usual resident but presently staying in the household
+        <input type="number"  required name="Resident2" />
+      </label>
+    </div>
+
+    <div class="section">
+      <label>
+        3.	Number of usual resident(s), if any, presently staying elsewhere
+        <input type="number"  required name="Resident3" />
+      </label>
+    </div>
+
+    <div class="section">
+      <label>
+        4.	Religion –
+        <select class="" name="Religion">
+          <option value="Hinduism">Hinduism</option>
+          <option value="Islam">Islam</option>
+          <option value="Christianity">Christianity</option>
+          <option value="Sikhism">Sikhism</option>
+          <option value="Buddhism">Buddhism</option>
+          <option value="Jainism">Jainism</option>
+          <option value="Others">Others</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="section">
+      <label>
+        5.	Caste –
+        <select class="" name="Caste">
+          <option value="General">General</option>
+          <option value="OBC">OBC</option>
+          <option value="SC">SC</option>
+          <option value="ST">ST</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="section">
+      <label>
+        6. Annual family income of household from all sources in rupees:
+
+        </br>
+        <input type="radio" required name="Income" value="< 5 lakhs" />
+        <label>less than 5 lakhs</label>
+
+        </br>
+        <input type="radio" required name="Income" value="5 – 10 lakhs" />
+        <label>5 – 10 lakhs</label>
+
+        </br>
+        <input type="radio" required name="Income" value="10 – 15 lakhs" />
+        <label>10 – 15 lakhs</label>
+
+        </br>
+        <input type="radio" required name="Income" value="15 – 20 lakhs" />
+        <label>15 – 20 lakhs</label>
+
+        </br>
+        <input type="radio" required name="Income" value="> 20 lakhs" />
+        <label>20 lakhs and above</label>
+
+        </br>
+        <input type="radio" required name="Income" value="Do not disclose" />
+        <label>Do not wish to disclose</label>
+
+      </label>
+    </div>
+
+    <div class="section">
+      <label>
+        7.	Number of domestic helps usually employed (those that help with housework)
+        </br>
+        <label>
+          a.	Number of part-time domestic helps
+          <input type="number" required name="Domestic_help_part_time" />
+        </label>
+      </br></br>
+        <label>
+          b.	Number of full-time domestic helps (stays with the HH)
+          <input type="number" required name="Domestic_help_full_time" />
+        </label>
+      </label>
+    </div>
+
+    <div class="section">
+      <label>
+        8.	PIN Code –
+        <input type="number" required name="Pincode" />
+      </label>
+    </div>
+
+    <div class="section">
+      <label>
+        9.	Type of residence
+
+        </br>
+        <input type="radio" required name="Residence_type" value="Apartment complex"/>
+        <label>Apartment complex</label>
+
+        </br>
+        <input type="radio" required name="Residence_type" value="Standalone housing unit"/>
+        <label>Standalone housing unit</label>
+
+      </label>
+    </div>
+
+    <div class="section">
+      <label>
+        10.	Type of apartment/house (BHK)
+
+        </br>
+        <input type="radio" name="Apartment_type" value="Apartment"/>
+        <label>Apartment</label>
+
+        </br>
+        <input type="radio" name="Apartment_type" value="House"/>
+        <label>House</label>
+
+      </label>
+    </div>
+
+    <div class="section">
+      <label>
+        11.	Residence ownership status –
+
+        </br>
+        <input type="radio" name="Residence_ownership" value="Owned"/>
+        <label>Owned</label>
+
+        </br>
+        <input type="radio" name="Residence_ownership" value="Rented"/>
+        <label>Rented</label>
+
+      </label>
+    </div>
+
+    <div class="section">
+      <label>
+        12. Own a motor vehicle
+
+        </br>
+        <input type="radio" required name="Vehicle_ownership" value="Yes"/>
+        <label>Yes</label>
+
+        </br>
+        <input type="radio" required name="Vehicle_ownership" value="No"/>
+        <label>No</label>
+
+      </label>
+    </div>
+
+
+    <div class="section">
+      <label>
+        13. Vehicle Type
+        </br>
+        <input type="radio" required name="Vehicle_type" value="2 Wheeler"/>
+        <label>2 Wheeler</label>
+
+        </br>
+        <input type="radio" required name="Vehicle_type" value="4 Wheeler"/>
+        <label>4 Wheeler</label>
+
+      </br>
+      <input type="radio" required name="Vehicle_type" value="Both"/>
+      <label>Both</label>
+
+      </label>
+
+    </div>
+
+    <div class="section">
+      <label>14.	Appliances owned:</label></br>
+      <input type="checkbox" name="Appliances" value="Microwave_Oven"> <label>Microwave Oven</label></br>
+      <input type="checkbox" name="Appliances" value="Refrigerator"> <label>Refrigerator</label></br>
+      <input type="checkbox" name="Appliances" value="Washing_Machine"> <label>Washing Machine</label></br>
+      <input type="checkbox" name="Appliances" value="Dishwashing_Machine"> <label>Dishwashing Machine</label></br>
+      <input type="checkbox" name="Appliances" value="Water_Purifier"> <label>Water purifier</label></br>
+      <input type="checkbox" name="Appliances" value="Computer"> <label>Computer</label></br>
+      <input type="checkbox" name="Appliances" value="Smartphone"> <label>Smartphone</label></br>
+      <input type="checkbox" name="Appliances" value="Television"> <label>Television</label></br>
+    </div>
+
+    <div class="section">
+      <label>15. No of hours children in daycare if daycare service taken else zero </label>
+      <input type="number" required name="Daycare_hrs">
+    </div>
+
+    <div class="section">
+      <label>16.	We usually use a cleaning/laundry service for
+        </br>
+        <input type="radio" required name="Laundry" value="cleaning only"/>
+        <label>cleaning only</label>
+
+        </br>
+        <input type="radio" required name="Laundry" value="ironing only"/>
+        <label>ironing only</label>
+
+        </br>
+        <input type="radio" required name="Laundry" value="both"/>
+        <label>both</label>
+      </label>
+    </div>
+
+    <div class="section">
+      <label>17. a.	We usually have a driver
+      </br>
+      <input type="radio" required name="Driver" value="Yes"/>
+      <label>Yes</label>
+
+      </br>
+      <input type="radio" required name="Driver" value="No"/>
+      <label>No</label>
+    </label>
+
+    </div>
+
+    <div class="section">
+      <label>17. b.	Driver helps in
+        </br>
+        <input type="radio" required name="Driver_use" value="Taking me and family members places"/>
+        <label>Taking me and family members places</label>
+
+        </br>
+        <input type="radio" required name="Driver_use" value="Doing groceries"/>
+        <label>Doing groceries</label>
+
+        </br>
+        <input type="radio" required name="Driver_use" value="Other random chores"/>
+        <label>Other random chores</label>
+
+        </br>
+        <input type="radio" required name="Driver_use" value="No Help"/>
+        <label>No Help</label>
+      </label>
+
+    </div>
+
+    <div class="section">
+      <label>18. Please fill in the following particulars for all the presently resident members of the household:</label>
+      </br>
+      <table id="my_table">
+        <tr>
+          <td>Relationship to head</td>
+          <td>Age</td>
+          <td>Gender</td>
+          <td>Marital Status</td>
+          <td>Employment Status</td>
+          <td>Occupation</td>
+          <td>Industry</td>
+          <td>Education</td>
+          <td>Disability</td>
+          <td>Respondent</td>
+          <td>Work from Home</td>
+          <td>Members help in Household</td>
+          <td>Temporary present in Houehold</td>
+
+
+        </tr>
+        <tr>
+          <td>
+            <select name="Relationship_1">
+              <option value="Self">Self</option>
+              <option value="Spouse">Spouse</option>
+              <option value="Child">Child</option>
+              <option value="Child-in-Law">Child-in-Law</option>
+              <option value="Parent">Parent</option>
+              <option value="Parent-in-Law">Parent-in-Law</option>
+              <option value="Grandchild">Grandchild</option>
+              <option value="others">others</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Age_1" />
+          </td>
+          <td>
+            <select name="Gender_1">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Marital_Status_1">
+              <option value="Married-cohatiting with partner">Married-cohatiting with partner</option>
+              <option value="Married - living apart">Married - living apart</option>
+              <option value="Single - never married">Single - never married</option>
+              <option value="Divorced/Seperated">Divorced/Seperated</option>
+              <option value="Widowed/Widower">Widowed/Widower</option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Employment_Status_1">
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Employed">Employed</option>
+              <option value="Unemployed">Unemployed</option>
+              <option value="Not interested in working">Not interested in working</option>
+              <option value="Retiree">Retiree</option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Occupation_1">
+              <option value="Empty"></option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Industry_1">
+              <option value="Empty"></option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Education_1">
+              <option value="Primary or below">Primary or below</option>
+              <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
+              <option value="Between secondary & including HS">Between secondary & including HS</option>
+              <option value="Some college degree">Some college degree</option>
+              <option value="Post graduate degree & above">Post graduate degree & above</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Disability_1">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Respondent_1">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Work_from_home_1">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Member_in_household_1">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Temporary_in_household_1">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+
+
+        </tr>
+
+
+        <tr>
+          <td>
+            <select name="Relationship_2">
+              <option value="Self">Self</option>
+              <option value="Spouse">Spouse</option>
+              <option value="Child">Child</option>
+              <option value="Child-in-Law">Child-in-Law</option>
+              <option value="Parent">Parent</option>
+              <option value="Parent-in-Law">Parent-in-Law</option>
+              <option value="Grandchild">Grandchild</option>
+              <option value="others">others</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Age_2" />
+          </td>
+          <td>
+            <select name="Gender_2">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Marital_Status_2">
+              <option value="Married-cohatiting with partner">Married-cohatiting with partner</option>
+              <option value="Married - living apart">Married - living apart</option>
+              <option value="Single - never married">Single - never married</option>
+              <option value="Divorced/Seperated">Divorced/Seperated</option>
+              <option value="Widowed/Widower">Widowed/Widower</option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Employment_Status_2">
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Employed">Employed</option>
+              <option value="Unemployed">Unemployed</option>
+              <option value="Not interested in working">Not interested in working</option>
+              <option value="Retiree">Retiree</option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Occupation_2">
+              <option value="Empty"></option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Industry_2">
+              <option value="Empty"></option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Education_2">
+              <option value="Primary or below">Primary or below</option>
+              <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
+              <option value="Between secondary & including HS">Between secondary & including HS</option>
+              <option value="Some college degree">Some college degree</option>
+              <option value="Post graduate degree & above">Post graduate degree & above</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Disability_2">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Respondent_2">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Work_from_home_2">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Member_in_household_2">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Temporary_in_household_2">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+
+
+        </tr>
+
+
+      </table>
+    </div>
+
+    <div class="section">
+      <label>19.	Whether anyone in family has been infected by Covid19:
+      </br>
+      <input type="radio" required name="Covid19_infected" value="Yes"/>
+      <label>Yes</label>
+
+      </br>
+      <input type="radio" required name="Covid19_infected" value="No"/>
+      <label>No</label>
+
+      </label>
+    </div>
+
+    <div class="section">
+      <label>20.	Whether anyone in family lost job(s) due to Covid19 induced situation:
+      </br>
+      <input type="radio" required name="Covid19_lost_job" value="Yes"/>
+      <label>Yes</label>
+
+      </br>
+      <input type="radio" required name="Covid19_lost_job" value="No"/>
+      <label>No</label>
+
+      </label>
+    </div>
+
+    <div class="section">
+      <label>21.	In the last standard full workday (Monday through Friday), I spent time on the following activities for the time indicated (If an activity is not done, please put in 0 for the total time). </label>
+      </br>
+      <table id="my_table">
+        <tr>
+          <td>Activity</td>
+          <td>Done on Reference Day</td>
+          <td>Total time spent (hrs)</td>
+          <td>If not done on reference day, average daily time spent on the activity during the week (hrs)</td>
+        </tr>
+
+        <tr>
+          <td>Self-care (including brushing, exercising)</td>
+          <td>
+            <select class="" name="Self_Care_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Self_Care_total_hr" />
+          </td>
+          <td>
+            <input type="number" name="Self_Care_avg_hr" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Travel (to/from work)</td>
+          <td>
+            <select class="" name="Travel_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Travel_total_hr" />
+          </td>
+          <td>
+            <input type="number" name="Travel_avg_hr" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Work</td>
+          <td>
+            <select class="" name="Work_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Work_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Work_avg_time" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Eating</td>
+          <td>
+            <select class="" name="Eating_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Eating_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Eating_avg_time" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Sleeping</td>
+          <td>
+            <select class="" name="Sleeping_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Sleeping_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Sleeping_avg_time" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Studying</td>
+          <td>
+            <select class="" name="Studying_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Studying_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Studying_avg_time" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Leisure-related activities (Chatting with family members
+Internet surfing, watching television, Leisure reading (newspapers, fiction, non-fiction), talking on phone (audio/video))
+</td>
+<td>
+  <select class="" name="Leisure_bool">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
+</td>
+<td>
+  <input type="number" name="Leisure_total_time" />
+</td>
+<td>
+  <input type="number" name="Leisure_avg_time" />
+</td>
+
+        </tr>
+
+        <tr>
+          <td>Searching for Job</td>
+          <td>
+            <select class="" name="Job_searching_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Job_searching_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Job_searching_avg_time" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Household work</td>
+          <td>
+            <select class="" name="Household_work_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Household_work_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Household_work_avg_time" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Cooking, preparing food</td>
+          <td>
+            <select class="" name="Cooking_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Cooking_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Cooking_avg_time" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Cleaning utensils</td>
+          <td>
+            <select class="" name="Utensils_clean_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Utensils_clean_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Utensils_clean_avg_time" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Washing Clothes</td>
+          <td>
+            <select class="" name="Washing_clothes_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Washing_clothes_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Washing_clothes_avg_time" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Folding/Ironing clothes</td>
+          <td>
+            <select class="" name="Ironing_clothes_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Ironing_clothes_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Ironing_clothes_avg_time" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Cleaning household (brooming, mopping)</td>
+          <td>
+            <select class="" name="Household_clean_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Household_clean_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Household_clean_avg_time" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Teaching children</td>
+          <td>
+            <select class="" name="Teaching_children_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Teaching_children_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Teaching_children_avg_time" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Taking care of elderly/disabled/patients</td>
+          <td>
+            <select class="" name="Elderly_person_care_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Elderly_person_care_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Elderly_person_care_avg_time" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Buying groceries or shopping (online/offline)</td>
+          <td>
+            <select class="" name="Shoping_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Shoping_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Shoping_avg_time" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Stepping out for household errands</td>
+          <td>
+            <select class="" name="Outside_time_bool">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" name="Outside_time_total_time" />
+          </td>
+          <td>
+            <input type="number" name="Outside_time_avg_time" />
+          </td>
+
+        </tr>
+
+
+      </table>
+    </div>
+
+    <div class="section">
+      <label>22. If domestic help is available at this time
+      </br>
+      <input type="radio" required name="Domestic_help_available" value="Yes"/>
+      <label>Yes</label>
+
+      </br>
+      <input type="radio" required name="Domestic_help_available" value="No"/>
+      <label>No</label>
+
+      </label>
+    </div>
+
+    <div class="section">
+      <label>23. Time spent on work done by household helps in the day before (If an activity is not done, please put in 0 for the total time):</label>
+      </br>
+      <table id="my_table">
+        <tr>
+          <td>Activity</td>
+          <td>Total</td>
+
+
+        </tr>
+        <tr>
+          <td>Preparing food</td>
+          <td><input type="number" name="Preparing_food_activity" /></td>
+        </tr>
+
+        <tr>
+          <td>Cleaning utensils</td>
+          <td><input type="number" name="Cleaning_food_activity" /></td>
+        </tr>
+        <tr>
+          <td>Cleaning clothes</td>
+          <td><input type="number" name="Cleaning_clothes_activity" /></td>
+        </tr>
+        <tr>
+          <td>Folding clothes</td>
+          <td><input type="number" name="Folding_clothes_activity" /></td>
+        </tr>
+        <tr>
+          <td>Ironing clothes</td>
+          <td><input type="number" name="Ironing_clothes_activity" /></td>
+        </tr>
+        <tr>
+          <td>Cleaning household (brooming)</td>
+          <td><input type="number" name="Brooming_activity" /></td>
+        </tr>
+        <tr>
+          <td>Cleaning household (mopping)</td>
+          <td><input type="number" name="Mopping_activity" /></td>
+        </tr>
+        <tr>
+          <td>Childcare</td>
+          <td><input type="number" name="Children_activity" /></td>
+        </tr>
+
+
+      </table>
+    </div>
+  </br></br>
+    <center><input type="submit" value="SUBMIT" class="submit_btn" /></center>
+
+  </form>
+
+
+  </body>
+</html>

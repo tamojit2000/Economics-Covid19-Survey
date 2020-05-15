@@ -1,0 +1,82 @@
+.header{
+  padding: 10px 16px;
+  background: linear-gradient(to right,blue,navy);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+.content {
+  padding: 16px;
+}
+
+.margin{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.section{
+  border-radius: 10px;
+  border-width: 1px;
+  border-color: blue;
+  border-style: groove;
+  padding: 16px;
+  min-height: 20px;
+  width: auto;
+  text-align: left;
+  margin-top: 10px;
+  overflow-x:auto;
+}
+#my_table{
+  border-collapse: collapse;
+  border:1px;
+  border-radius: 25px;
+}
+.submit_btn{
+  width: 100px;
+  heigth: 50px;
+  background: linear-gradient(to right,blue,navy);
+  border-radius: 25px;
+  color: white;
+  text-align: center;
+}
+.question_disagree_button{
+	border: 0px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 10px;
+	color: white;
+	text-align: center;
+	padding: 15px;
+	position: relative;
+	left: 10px;
+	width: 100px;
+	height: 60px;
+}
+.question_agree_button{
+	border: 0px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 10px;
+	background: linear-gradient(to bottom right,blue,navy);
+	text-align: center;
+	padding: 15px;
+	position: relative;
+	right: 10px;
+	width: 100px;
+	height: 60px;
+}
+.index_button_box{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
