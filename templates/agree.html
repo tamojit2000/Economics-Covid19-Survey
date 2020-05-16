@@ -17,6 +17,9 @@
 	</br>
 	</br>
 	</br>
+  </br>
+  </br>
+  </br>
 
     <form action="/submit_agree" method="post">
 
@@ -30,21 +33,21 @@
     <div class="section">
       <label>
         1.	Number of People presently in the household (please include all, including small children)
-        <input type="number"  required name="Resident1" />
+        <input type="number" min="1" required name="Resident1" />
       </label>
     </div>
 
     <div class="section">
       <label>
         2.	Number of people, if any, not a usual resident but presently staying in the household
-        <input type="number"  required name="Resident2" />
+        <input type="number" min="0" required name="Resident2" />
       </label>
     </div>
 
     <div class="section">
       <label>
         3.	Number of usual resident(s), if any, presently staying elsewhere
-        <input type="number"  required name="Resident3" />
+        <input type="number" min="0" required name="Resident3" />
       </label>
     </div>
 
@@ -59,6 +62,7 @@
           <option value="Buddhism">Buddhism</option>
           <option value="Jainism">Jainism</option>
           <option value="Others">Others</option>
+          <option value="Prefer not to answer"></option>
         </select>
       </label>
     </div>
@@ -71,6 +75,7 @@
           <option value="OBC">OBC</option>
           <option value="SC">SC</option>
           <option value="ST">ST</option>
+          <option value="Prefer not to answer"></option>
         </select>
       </label>
     </div>
@@ -112,12 +117,12 @@
         </br>
         <label>
           a.	Number of part-time domestic helps
-          <input type="number" required name="Domestic_help_part_time" />
+          <input type="number" min="0" required name="Domestic_help_part_time" />
         </label>
       </br></br>
         <label>
           b.	Number of full-time domestic helps (stays with the HH)
-          <input type="number" required name="Domestic_help_full_time" />
+          <input type="number" min="0" required name="Domestic_help_full_time" />
         </label>
       </label>
     </div>
@@ -141,20 +146,39 @@
         <input type="radio" required name="Residence_type" value="Standalone housing unit"/>
         <label>Standalone housing unit</label>
 
+      </br>
+      <input type="radio" required name="Residence_type" value="Residential colony"/>
+      <label>Residential colony</label>
+
       </label>
     </div>
 
     <div class="section">
       <label>
-        10.	Type of apartment/house (BHK)
+        10.	Size of Household(in terms of number of bedrooms)
 
         </br>
-        <input type="radio" name="Apartment_type" value="Apartment"/>
-        <label>Apartment</label>
+        <input type="radio" name="Apartment_type" value="1 BHK"/>
+        <label>1 BHK</label>
 
         </br>
-        <input type="radio" name="Apartment_type" value="House"/>
-        <label>House</label>
+        <input type="radio" name="Apartment_type" value="2 BHK"/>
+        <label>2 BHK</label>
+
+        </br>
+        <input type="radio" name="Apartment_type" value="3 BHK"/>
+        <label>3 BHK</label>
+
+        </br>
+        <input type="radio" name="Apartment_type" value="4 BHK"/>
+        <label>4 BHK</label>
+
+        </br>
+        <input type="radio" name="Apartment_type" value="5 BHK & above"/>
+        <label>5 BHK & above</label>
+
+
+
 
       </label>
     </div>
@@ -170,6 +194,10 @@
         </br>
         <input type="radio" name="Residence_ownership" value="Rented"/>
         <label>Rented</label>
+
+        </br>
+        <input type="radio" name="Residence_ownership" value="Employer provided"/>
+        <label>Employer provided</label>
 
       </label>
     </div>
@@ -205,6 +233,9 @@
       <input type="radio" required name="Vehicle_type" value="Both"/>
       <label>Both</label>
 
+    </br>
+    <input type="radio" required name="Vehicle_type" value="No"/>
+    <label>No</label>
       </label>
 
     </div>
@@ -222,8 +253,8 @@
     </div>
 
     <div class="section">
-      <label>15. No of hours children in daycare if daycare service taken else zero </label>
-      <input type="number" required name="Daycare_hrs">
+      <label>15. No of hours spent by children in daycare (please put 0 if service not availed)</label>
+      <input type="number" step="0.01" min="0.00" required name="Daycare_hrs">
     </div>
 
     <div class="section">
@@ -239,6 +270,11 @@
         </br>
         <input type="radio" required name="Laundry" value="both"/>
         <label>both</label>
+
+      </br>
+      <input type="radio" required name="Laundry" value="None"/>
+      <label>None</label>
+
       </label>
     </div>
 
@@ -495,6 +531,401 @@
         </tr>
 
 
+        <tr>
+          <td>
+            <select name="Relationship_3">
+              <option value="Self">Self</option>
+              <option value="Spouse">Spouse</option>
+              <option value="Child">Child</option>
+              <option value="Child-in-Law">Child-in-Law</option>
+              <option value="Parent">Parent</option>
+              <option value="Parent-in-Law">Parent-in-Law</option>
+              <option value="Grandchild">Grandchild</option>
+              <option value="others">others</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" min="1" max="120" name="Age_2" />
+          </td>
+          <td>
+            <select name="Gender_3">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Marital_Status_3">
+              <option value="Married-cohatiting with partner">Married-cohatiting with partner</option>
+              <option value="Married - living apart">Married - living apart</option>
+              <option value="Single - never married">Single - never married</option>
+              <option value="Divorced/Seperated">Divorced/Seperated</option>
+              <option value="Widowed/Widower">Widowed/Widower</option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Employment_Status_3">
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Employed">Employed</option>
+              <option value="Unemployed">Unemployed</option>
+              <option value="Not interested in working">Not interested in working</option>
+              <option value="Retiree">Retiree</option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Occupation_3">
+              <option value="Empty"></option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Industry_3">
+              <option value="Empty"></option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Education_3">
+              <option value="Primary or below">Primary or below</option>
+              <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
+              <option value="Between secondary & including HS">Between secondary & including HS</option>
+              <option value="Some college degree">Some college degree</option>
+              <option value="Post graduate degree & above">Post graduate degree & above</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Disability_3">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Respondent_3">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Work_from_home_3">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Member_in_household_3">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Temporary_in_household_3">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+
+
+        </tr>
+
+
+        <tr>
+          <td>
+            <select name="Relationship_4">
+              <option value="Self">Self</option>
+              <option value="Spouse">Spouse</option>
+              <option value="Child">Child</option>
+              <option value="Child-in-Law">Child-in-Law</option>
+              <option value="Parent">Parent</option>
+              <option value="Parent-in-Law">Parent-in-Law</option>
+              <option value="Grandchild">Grandchild</option>
+              <option value="others">others</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" min="1" max="120" name="Age_2" />
+          </td>
+          <td>
+            <select name="Gender_4">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Marital_Status_4">
+              <option value="Married-cohatiting with partner">Married-cohatiting with partner</option>
+              <option value="Married - living apart">Married - living apart</option>
+              <option value="Single - never married">Single - never married</option>
+              <option value="Divorced/Seperated">Divorced/Seperated</option>
+              <option value="Widowed/Widower">Widowed/Widower</option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Employment_Status_4">
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Employed">Employed</option>
+              <option value="Unemployed">Unemployed</option>
+              <option value="Not interested in working">Not interested in working</option>
+              <option value="Retiree">Retiree</option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Occupation_4">
+              <option value="Empty"></option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Industry_4">
+              <option value="Empty"></option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Education_4">
+              <option value="Primary or below">Primary or below</option>
+              <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
+              <option value="Between secondary & including HS">Between secondary & including HS</option>
+              <option value="Some college degree">Some college degree</option>
+              <option value="Post graduate degree & above">Post graduate degree & above</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Disability_4">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Respondent_4">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Work_from_home_4">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Member_in_household_4">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Temporary_in_household_4">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+
+
+        </tr>
+
+
+        <tr>
+          <td>
+            <select name="Relationship_5">
+              <option value="Self">Self</option>
+              <option value="Spouse">Spouse</option>
+              <option value="Child">Child</option>
+              <option value="Child-in-Law">Child-in-Law</option>
+              <option value="Parent">Parent</option>
+              <option value="Parent-in-Law">Parent-in-Law</option>
+              <option value="Grandchild">Grandchild</option>
+              <option value="others">others</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" min="1" max="120" name="Age_2" />
+          </td>
+          <td>
+            <select name="Gender_5">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Marital_Status_5">
+              <option value="Married-cohatiting with partner">Married-cohatiting with partner</option>
+              <option value="Married - living apart">Married - living apart</option>
+              <option value="Single - never married">Single - never married</option>
+              <option value="Divorced/Seperated">Divorced/Seperated</option>
+              <option value="Widowed/Widower">Widowed/Widower</option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Employment_Status_5">
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Employed">Employed</option>
+              <option value="Unemployed">Unemployed</option>
+              <option value="Not interested in working">Not interested in working</option>
+              <option value="Retiree">Retiree</option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Occupation_5">
+              <option value="Empty"></option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Industry_5">
+              <option value="Empty"></option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Education_5">
+              <option value="Primary or below">Primary or below</option>
+              <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
+              <option value="Between secondary & including HS">Between secondary & including HS</option>
+              <option value="Some college degree">Some college degree</option>
+              <option value="Post graduate degree & above">Post graduate degree & above</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Disability_5">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Respondent_5">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Work_from_home_5">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Member_in_household_5">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Temporary_in_household_5">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+
+
+        </tr>
+
+        <tr>
+          <td>
+            <select name="Relationship_6">
+              <option value="Self">Self</option>
+              <option value="Spouse">Spouse</option>
+              <option value="Child">Child</option>
+              <option value="Child-in-Law">Child-in-Law</option>
+              <option value="Parent">Parent</option>
+              <option value="Parent-in-Law">Parent-in-Law</option>
+              <option value="Grandchild">Grandchild</option>
+              <option value="others">others</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" min="1" max="120" name="Age_6" />
+          </td>
+          <td>
+            <select name="Gender_6">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Marital_Status_6">
+              <option value="Married-cohatiting with partner">Married-cohatiting with partner</option>
+              <option value="Married - living apart">Married - living apart</option>
+              <option value="Single - never married">Single - never married</option>
+              <option value="Divorced/Seperated">Divorced/Seperated</option>
+              <option value="Widowed/Widower">Widowed/Widower</option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Employment_Status_6">
+              <option value="Full-time">Full-time</option>
+              <option value="Part-time">Part-time</option>
+              <option value="Employed">Employed</option>
+              <option value="Unemployed">Unemployed</option>
+              <option value="Not interested in working">Not interested in working</option>
+              <option value="Retiree">Retiree</option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Occupation_6">
+              <option value="Empty"></option>
+
+            </select>
+          </td>
+          <td>
+            <select class="" name="Industry_6">
+              <option value="Empty"></option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Education_6">
+              <option value="Primary or below">Primary or below</option>
+              <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
+              <option value="Between secondary & including HS">Between secondary & including HS</option>
+              <option value="Some college degree">Some college degree</option>
+              <option value="Post graduate degree & above">Post graduate degree & above</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Disability_6">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Respondent_6">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Work_from_home_6">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Member_in_household_6">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Temporary_in_household_6">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+
+
+        </tr>
+
+
       </table>
     </div>
 
@@ -530,7 +961,6 @@
       <table id="my_table">
         <tr>
           <td>Activity</td>
-          <td>Done on Reference Day</td>
           <td>Total time spent (hrs)</td>
           <td>If not done on reference day, average daily time spent on the activity during the week (hrs)</td>
         </tr>
@@ -538,32 +968,20 @@
         <tr>
           <td>Self-care (including brushing, exercising)</td>
           <td>
-            <select class="" name="Self_Care_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Self_Care_total_hr" />
           </td>
           <td>
-            <input type="number" name="Self_Care_total_hr" />
-          </td>
-          <td>
-            <input type="number" name="Self_Care_avg_hr" />
+            <input type="number" step="0.01" min="0.00" name="Self_Care_avg_hr" />
           </td>
         </tr>
 
         <tr>
           <td>Travel (to/from work)</td>
           <td>
-            <select class="" name="Travel_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Travel_total_hr" />
           </td>
           <td>
-            <input type="number" name="Travel_total_hr" />
-          </td>
-          <td>
-            <input type="number" name="Travel_avg_hr" />
+            <input type="number" step="0.01" min="0.00" name="Travel_avg_hr" />
           </td>
 
         </tr>
@@ -571,33 +989,22 @@
         <tr>
           <td>Work</td>
           <td>
-            <select class="" name="Work_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Work_total_time" />
           </td>
           <td>
-            <input type="number" name="Work_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Work_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Work_avg_time" />
           </td>
 
         </tr>
 
         <tr>
           <td>Eating</td>
+
           <td>
-            <select class="" name="Eating_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Eating_total_time" />
           </td>
           <td>
-            <input type="number" name="Eating_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Eating_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Eating_avg_time" />
           </td>
 
         </tr>
@@ -605,16 +1012,10 @@
         <tr>
           <td>Sleeping</td>
           <td>
-            <select class="" name="Sleeping_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Sleeping_total_time" />
           </td>
           <td>
-            <input type="number" name="Sleeping_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Sleeping_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Sleeping_avg_time" />
           </td>
 
         </tr>
@@ -622,16 +1023,10 @@
         <tr>
           <td>Studying</td>
           <td>
-            <select class="" name="Studying_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Studying_total_time" />
           </td>
           <td>
-            <input type="number" name="Studying_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Studying_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Studying_avg_time" />
           </td>
 
         </tr>
@@ -641,16 +1036,10 @@
 Internet surfing, watching television, Leisure reading (newspapers, fiction, non-fiction), talking on phone (audio/video))
 </td>
 <td>
-  <select class="" name="Leisure_bool">
-    <option value="Yes">Yes</option>
-    <option value="No">No</option>
-  </select>
+  <input type="number" step="0.01" min="0.00" name="Leisure_total_time" />
 </td>
 <td>
-  <input type="number" name="Leisure_total_time" />
-</td>
-<td>
-  <input type="number" name="Leisure_avg_time" />
+  <input type="number" step="0.01" min="0.00" name="Leisure_avg_time" />
 </td>
 
         </tr>
@@ -658,16 +1047,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Searching for Job</td>
           <td>
-            <select class="" name="Job_searching_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Job_searching_total_time" />
           </td>
           <td>
-            <input type="number" name="Job_searching_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Job_searching_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Job_searching_avg_time" />
           </td>
 
         </tr>
@@ -675,16 +1058,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Household work</td>
           <td>
-            <select class="" name="Household_work_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Household_work_total_time" />
           </td>
           <td>
-            <input type="number" name="Household_work_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Household_work_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Household_work_avg_time" />
           </td>
 
         </tr>
@@ -692,50 +1069,34 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Cooking, preparing food</td>
           <td>
-            <select class="" name="Cooking_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Cooking_total_time" />
           </td>
           <td>
-            <input type="number" name="Cooking_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Cooking_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Cooking_avg_time" />
           </td>
 
         </tr>
 
         <tr>
           <td>Cleaning utensils</td>
+
           <td>
-            <select class="" name="Utensils_clean_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Utensils_clean_total_time" />
           </td>
           <td>
-            <input type="number" name="Utensils_clean_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Utensils_clean_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Utensils_clean_avg_time" />
           </td>
 
         </tr>
 
         <tr>
           <td>Washing Clothes</td>
+
           <td>
-            <select class="" name="Washing_clothes_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Washing_clothes_total_time" />
           </td>
           <td>
-            <input type="number" name="Washing_clothes_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Washing_clothes_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Washing_clothes_avg_time" />
           </td>
 
         </tr>
@@ -743,16 +1104,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Folding/Ironing clothes</td>
           <td>
-            <select class="" name="Ironing_clothes_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Ironing_clothes_total_time" />
           </td>
           <td>
-            <input type="number" name="Ironing_clothes_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Ironing_clothes_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Ironing_clothes_avg_time" />
           </td>
 
         </tr>
@@ -760,16 +1115,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Cleaning household (brooming, mopping)</td>
           <td>
-            <select class="" name="Household_clean_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Household_clean_total_time" />
           </td>
           <td>
-            <input type="number" name="Household_clean_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Household_clean_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Household_clean_avg_time" />
           </td>
 
         </tr>
@@ -777,16 +1126,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Teaching children</td>
           <td>
-            <select class="" name="Teaching_children_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Teaching_children_total_time" />
           </td>
           <td>
-            <input type="number" name="Teaching_children_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Teaching_children_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Teaching_children_avg_time" />
           </td>
 
         </tr>
@@ -794,16 +1137,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Taking care of elderly/disabled/patients</td>
           <td>
-            <select class="" name="Elderly_person_care_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Elderly_person_care_total_time" />
           </td>
           <td>
-            <input type="number" name="Elderly_person_care_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Elderly_person_care_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Elderly_person_care_avg_time" />
           </td>
 
         </tr>
@@ -811,16 +1148,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Buying groceries or shopping (online/offline)</td>
           <td>
-            <select class="" name="Shoping_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Shoping_total_time" />
           </td>
           <td>
-            <input type="number" name="Shoping_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Shoping_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Shoping_avg_time" />
           </td>
 
         </tr>
@@ -828,16 +1159,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Stepping out for household errands</td>
           <td>
-            <select class="" name="Outside_time_bool">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <input type="number" step="0.01" min="0.00" name="Outside_time_total_time" />
           </td>
           <td>
-            <input type="number" name="Outside_time_total_time" />
-          </td>
-          <td>
-            <input type="number" name="Outside_time_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Outside_time_avg_time" />
           </td>
 
         </tr>
@@ -871,41 +1196,162 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         </tr>
         <tr>
           <td>Preparing food</td>
-          <td><input type="number" name="Preparing_food_activity" /></td>
+          <td><input type="number" step="0.01" min="0.00" name="Preparing_food_activity" /></td>
         </tr>
 
         <tr>
           <td>Cleaning utensils</td>
-          <td><input type="number" name="Cleaning_food_activity" /></td>
+          <td><input type="number" step="0.01" min="0.00" name="Cleaning_food_activity" /></td>
         </tr>
         <tr>
           <td>Cleaning clothes</td>
-          <td><input type="number" name="Cleaning_clothes_activity" /></td>
+          <td><input type="number" step="0.01" min="0.00" name="Cleaning_clothes_activity" /></td>
         </tr>
         <tr>
           <td>Folding clothes</td>
-          <td><input type="number" name="Folding_clothes_activity" /></td>
+          <td><input type="number" step="0.01" min="0.00" name="Folding_clothes_activity" /></td>
         </tr>
         <tr>
           <td>Ironing clothes</td>
-          <td><input type="number" name="Ironing_clothes_activity" /></td>
+          <td><input type="number" step="0.01" min="0.00" name="Ironing_clothes_activity" /></td>
         </tr>
         <tr>
           <td>Cleaning household (brooming)</td>
-          <td><input type="number" name="Brooming_activity" /></td>
+          <td><input type="number" step="0.01" min="0.00" name="Brooming_activity" /></td>
         </tr>
         <tr>
           <td>Cleaning household (mopping)</td>
-          <td><input type="number" name="Mopping_activity" /></td>
+          <td><input type="number" step="0.01" min="0.00" name="Mopping_activity" /></td>
         </tr>
         <tr>
           <td>Childcare</td>
-          <td><input type="number" name="Children_activity" /></td>
+          <td><input type="number" step="0.01" min="0.00" name="Children_activity" /></td>
         </tr>
 
 
       </table>
     </div>
+
+    <div class="section">
+      <label>
+        24. Is the city/town you are living in currently under lockdown?
+
+        </br>
+        <input type="radio" required name="City_town_lockdown" value="Yes" />
+        <label>Yes</label>
+
+        </br>
+        <input type="radio" required name="City_town_lockdown" value="No" />
+        <label>No</label>
+
+      </label>
+    </div>
+
+    <div class="section">
+      <label>
+        25. How long do you think will the COVID-19 crisis continue?
+
+        </br>
+        <input type="radio" required name="Covid19_duration" value="Less than a month" />
+        <label>Less than a month</label>
+
+        </br>
+        <input type="radio" required name="Covid19_duration" value="More than a month but less than six months" />
+        <label>More than a month but less than six months</label>
+
+        </br>
+        <input type="radio" required name="Covid19_duration" value="More than 6 months but less than a year" />
+        <label>More than 6 months but less than a year</label>
+
+        </br>
+        <input type="radio" required name="Covid19_duration" value="More than a year" />
+        <label>More than a year</label>
+
+        </br>
+        <input type="radio" required name="Covid19_duration" value="We have to live with the virus forever" />
+        <label>We have to live with the virus forever</label>
+
+      </label>
+    </div>
+
+    <div class="section">
+      <label>26. How is your family preparing financially for the aftereffects of the COVID-19 crisis?</label></br>
+      <input type="checkbox" name="Covid19_after_effects" value="By taking personal loans"> <label>By taking personal loans</label></br>
+      <input type="checkbox" name="Covid19_after_effects" value="By withdrawing money from our savings account"> <label>By withdrawing money from our savings account</label></br>
+      <input type="checkbox" name="Covid19_after_effects" value="By withdrawing money from the provident fund"> <label>By withdrawing money from the provident fund</label></br>
+      <input type="checkbox" name="Covid19_after_effects" value="By selling mutual fund/stock holdings"> <label>By selling mutual fund/stock holdings</label></br>
+      <input type="checkbox" name="Covid19_after_effects" value="By investing more in mutual funds/stock holdings"> <label>By investing more in mutual funds/stock holdings</label></br>
+      <input type="checkbox" name="Covid19_after_effects" value="Investing in gold"> <label>Investing in gold</label></br>
+      <input type="checkbox" name="Covid19_after_effects" value="None of the above"> <label>None of the above</label></br>
+
+    </div>
+
+    <div class="section">
+      <label>
+        27. Rising economic uncertainty often leads to disagreements/strife within a household. How frequently have such incidents happened in your home?
+
+        </br>
+        <input type="radio" required name="Economy_rise" value="Every day" />
+        <label>Every day</label>
+
+        </br>
+        <input type="radio" required name="Economy_rise" value="Multiple times a week" />
+        <label>Multiple times a week</label>
+
+        </br>
+        <input type="radio" required name="Economy_rise" value="Once a week" />
+        <label>Once a week</label>
+
+        </br>
+        <input type="radio" required name="Economy_rise" value="About once a month" />
+        <label>About once a month</label>
+
+        </br>
+        <input type="radio" required name="Economy_rise" value="Never" />
+        <label>Never</label>
+
+        </br>
+        <input type="radio" required name="Economy_rise" value="NA" />
+        <label>NA</label>
+
+      </label>
+    </div>
+
+    <div class="section">
+      <label>28. Which of the following measures do you think should be taken by the government to deal with the COVID-19 crisis?</label></br>
+      <input type="checkbox" name="Govt_measures" value="Announce an economic package for small/medium enterprises"> <label>Announce an economic package for small/medium enterprises</label></br>
+      <input type="checkbox" name="Govt_measures" value="Give tax breaks to individuals and businesses"> <label>Give tax breaks to individuals and businesses</label></br>
+      <input type="checkbox" name="Govt_measures" value="Spend a larger amount on health care"> <label>Spend a larger amount on health care</label></br>
+      <input type="checkbox" name="Govt_measures" value="Bailout large businesses such as airlines"> <label>Bailout large businesses such as airlines</label></br>
+
+    </div>
+
+    <div class="section">
+      <label>
+        29. How soon do you think will you be willing to travel?
+
+        </br>
+        <input type="radio" required name="Travel_will" value="Less than a month" />
+        <label>Less than a month</label>
+
+        </br>
+        <input type="radio" required name="Travel_will" value="Less than six months" />
+        <label>Less than six months</label>
+
+        </br>
+        <input type="radio" required name="Travel_will" value="Less than a year" />
+        <label>Less than a year</label>
+
+        </br>
+        <input type="radio" required name="Travel_will" value="More than a year" />
+        <label>More than a year</label>
+
+
+      </label>
+    </div>
+
+
+
   </br></br>
     <center><input type="submit" value="SUBMIT" class="submit_btn" /></center>
 
