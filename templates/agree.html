@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script type="text/javascript" src="/./static/my_js.js"></script>
+    <script type="text/javascript" src="../static/my_js.js"></script>
     <link href="../static/my_css.css" rel="stylesheet" type="text/css">
     <title>Survey</title>
   </head>
@@ -54,7 +54,7 @@
     <div class="section">
       <label>
         4.	Religion –
-        <select class="" name="Religion">
+        <select class="" name="Religion" id="Religion" onchange="disableCaste();">
           <option value="Hinduism">Hinduism</option>
           <option value="Islam">Islam</option>
           <option value="Christianity">Christianity</option>
@@ -62,7 +62,7 @@
           <option value="Buddhism">Buddhism</option>
           <option value="Jainism">Jainism</option>
           <option value="Others">Others</option>
-          <option value="Prefer not to answer"></option>
+          <option value="Prefer not to answer">Prefer not to answer</option>
         </select>
       </label>
     </div>
@@ -70,12 +70,12 @@
     <div class="section">
       <label>
         5.	Caste –
-        <select class="" name="Caste">
+        <select class="" name="Caste" id="Caste">
           <option value="General">General</option>
           <option value="OBC">OBC</option>
           <option value="SC">SC</option>
           <option value="ST">ST</option>
-          <option value="Prefer not to answer"></option>
+          <option value="Prefer not to answer">Prefer not to answer</option>
         </select>
       </label>
     </div>
@@ -207,11 +207,11 @@
         12. Own a motor vehicle
 
         </br>
-        <input type="radio" required name="Vehicle_ownership" value="Yes"/>
+        <input type="radio" required name="Vehicle_ownership" id="Vehicle_ownership" value="Yes" onclick="disableVehicletype();"/>
         <label>Yes</label>
 
         </br>
-        <input type="radio" required name="Vehicle_ownership" value="No"/>
+        <input type="radio" required name="Vehicle_ownership" id="Vehicle_ownership" value="No" onclick="disableVehicletype();"/>
         <label>No</label>
 
       </label>
@@ -222,19 +222,19 @@
       <label>
         13. Vehicle Type
         </br>
-        <input type="radio" required name="Vehicle_type" value="2 Wheeler"/>
+        <input type="radio" required name="Vehicle_type" id="Vehicle_type1" value="2 Wheeler"/>
         <label>2 Wheeler</label>
 
         </br>
-        <input type="radio" required name="Vehicle_type" value="4 Wheeler"/>
+        <input type="radio" required name="Vehicle_type" id="Vehicle_type2" value="4 Wheeler"/>
         <label>4 Wheeler</label>
 
       </br>
-      <input type="radio" required name="Vehicle_type" value="Both"/>
+      <input type="radio" required name="Vehicle_type" id="Vehicle_type3" value="Both"/>
       <label>Both</label>
 
     </br>
-    <input type="radio" required name="Vehicle_type" value="No"/>
+    <input type="radio" required name="Vehicle_type" id="Vehicle_type4" value="No"/>
     <label>No</label>
       </label>
 
@@ -281,11 +281,11 @@
     <div class="section">
       <label>17. a.	We usually have a driver
       </br>
-      <input type="radio" required name="Driver" value="Yes"/>
+      <input type="radio" required name="Driver" id="Driver" value="Yes" onclick="disableDriverhelp();" />
       <label>Yes</label>
 
       </br>
-      <input type="radio" required name="Driver" value="No"/>
+      <input type="radio" required name="Driver" id="Driver" value="No" onclick="disableDriverhelp();" />
       <label>No</label>
     </label>
 
@@ -294,19 +294,19 @@
     <div class="section">
       <label>17. b.	Driver helps in
         </br>
-        <input type="radio" required name="Driver_use" value="Taking me and family members places"/>
+        <input type="radio" required name="Driver_use" id="Driver_use1" value="Taking me and family members places"/>
         <label>Taking me and family members places</label>
 
         </br>
-        <input type="radio" required name="Driver_use" value="Doing groceries"/>
+        <input type="radio" required name="Driver_use" id="Driver_use2" value="Doing groceries"/>
         <label>Doing groceries</label>
 
         </br>
-        <input type="radio" required name="Driver_use" value="Other random chores"/>
+        <input type="radio" required name="Driver_use" id="Driver_use3" value="Other random chores"/>
         <label>Other random chores</label>
 
         </br>
-        <input type="radio" required name="Driver_use" value="No Help"/>
+        <input type="radio" required name="Driver_use" id="Driver_use4" value="No Help"/>
         <label>No Help</label>
       </label>
 
@@ -317,7 +317,9 @@
       </br>
       <table id="my_table">
         <tr>
+          <td>Sl no</td>
           <td>Relationship to head</td>
+          <td>Respondent</td>
           <td>Age</td>
           <td>Gender</td>
           <td>Marital Status</td>
@@ -326,7 +328,6 @@
           <td>Industry</td>
           <td>Education</td>
           <td>Disability</td>
-          <td>Respondent</td>
           <td>Work from Home</td>
           <td>Members help in Household</td>
           <td>Temporary present in Houehold</td>
@@ -334,6 +335,7 @@
 
         </tr>
         <tr>
+          <td>A</td>
           <td>
             <select name="Relationship_1">
               <option value="Self">Self</option>
@@ -344,6 +346,12 @@
               <option value="Parent-in-Law">Parent-in-Law</option>
               <option value="Grandchild">Grandchild</option>
               <option value="others">others</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Respondent_1">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
             </select>
           </td>
           <td>
@@ -378,15 +386,13 @@
             </select>
           </td>
           <td>
-            <select class="" name="Occupation_1">
-              <option value="Empty"></option>
+            <input type="text" name="Occupation_1" />
 
-            </select>
+
           </td>
           <td>
-            <select class="" name="Industry_1">
-              <option value="Empty"></option>
-            </select>
+            <input type="text" name="Industry_1" />
+
           </td>
           <td>
             <select class="" name="Education_1">
@@ -403,12 +409,7 @@
               <option value="No">No</option>
             </select>
           </td>
-          <td>
-            <select class="" name="Respondent_1">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </td>
+
           <td>
             <select class="" name="Work_from_home_1">
               <option value="Yes">Yes</option>
@@ -433,6 +434,7 @@
 
 
         <tr>
+          <td>B</td>
           <td>
             <select name="Relationship_2">
               <option value="Self">Self</option>
@@ -443,6 +445,12 @@
               <option value="Parent-in-Law">Parent-in-Law</option>
               <option value="Grandchild">Grandchild</option>
               <option value="others">others</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Respondent_2">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
             </select>
           </td>
           <td>
@@ -477,15 +485,15 @@
             </select>
           </td>
           <td>
-            <select class="" name="Occupation_2">
-              <option value="Empty"></option>
+            <input type="text" name="Occupation_2" />
 
-            </select>
+
+
           </td>
           <td>
-            <select class="" name="Industry_2">
-              <option value="Empty"></option>
-            </select>
+            <input type="text" name="Industry_2" />
+
+
           </td>
           <td>
             <select class="" name="Education_2">
@@ -502,12 +510,7 @@
               <option value="No">No</option>
             </select>
           </td>
-          <td>
-            <select class="" name="Respondent_2">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </td>
+
           <td>
             <select class="" name="Work_from_home_2">
               <option value="Yes">Yes</option>
@@ -532,7 +535,8 @@
 
 
         <tr>
-          <td>
+          <td>C</td>
+            <td>
             <select name="Relationship_3">
               <option value="Self">Self</option>
               <option value="Spouse">Spouse</option>
@@ -545,7 +549,13 @@
             </select>
           </td>
           <td>
-            <input type="number" min="1" max="120" name="Age_2" />
+            <select class="" name="Respondent_3">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+          <td>
+            <input type="number" min="1" max="120" name="Age_3" />
           </td>
           <td>
             <select name="Gender_3">
@@ -576,15 +586,15 @@
             </select>
           </td>
           <td>
-            <select class="" name="Occupation_3">
-              <option value="Empty"></option>
+            <input type="text" name="Occupation_3" />
 
-            </select>
+
+
           </td>
           <td>
-            <select class="" name="Industry_3">
-              <option value="Empty"></option>
-            </select>
+            <input type="text" name="Industry_3" />
+
+
           </td>
           <td>
             <select class="" name="Education_3">
@@ -601,12 +611,7 @@
               <option value="No">No</option>
             </select>
           </td>
-          <td>
-            <select class="" name="Respondent_3">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </td>
+
           <td>
             <select class="" name="Work_from_home_3">
               <option value="Yes">Yes</option>
@@ -631,6 +636,7 @@
 
 
         <tr>
+          <td>D</td>
           <td>
             <select name="Relationship_4">
               <option value="Self">Self</option>
@@ -644,7 +650,14 @@
             </select>
           </td>
           <td>
-            <input type="number" min="1" max="120" name="Age_2" />
+            <select class="" name="Respondent_4">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+
+          <td>
+            <input type="number" min="1" max="120" name="Age_4" />
           </td>
           <td>
             <select name="Gender_4">
@@ -675,15 +688,15 @@
             </select>
           </td>
           <td>
-            <select class="" name="Occupation_4">
-              <option value="Empty"></option>
+            <input type="text" name="Occupation_4" />
 
-            </select>
+
+
           </td>
           <td>
-            <select class="" name="Industry_4">
-              <option value="Empty"></option>
-            </select>
+            <input type="text" name="Industry_4" />
+
+
           </td>
           <td>
             <select class="" name="Education_4">
@@ -700,12 +713,7 @@
               <option value="No">No</option>
             </select>
           </td>
-          <td>
-            <select class="" name="Respondent_4">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </td>
+
           <td>
             <select class="" name="Work_from_home_4">
               <option value="Yes">Yes</option>
@@ -730,6 +738,7 @@
 
 
         <tr>
+          <td>E</td>
           <td>
             <select name="Relationship_5">
               <option value="Self">Self</option>
@@ -743,7 +752,14 @@
             </select>
           </td>
           <td>
-            <input type="number" min="1" max="120" name="Age_2" />
+            <select class="" name="Respondent_5">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+
+          <td>
+            <input type="number" min="1" max="120" name="Age_5" />
           </td>
           <td>
             <select name="Gender_5">
@@ -774,15 +790,15 @@
             </select>
           </td>
           <td>
-            <select class="" name="Occupation_5">
-              <option value="Empty"></option>
+            <input type="text" name="Occupation_5" />
 
-            </select>
+
+
           </td>
           <td>
-            <select class="" name="Industry_5">
-              <option value="Empty"></option>
-            </select>
+            <input type="text" name="Industry_5" />
+
+
           </td>
           <td>
             <select class="" name="Education_5">
@@ -799,12 +815,7 @@
               <option value="No">No</option>
             </select>
           </td>
-          <td>
-            <select class="" name="Respondent_5">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </td>
+
           <td>
             <select class="" name="Work_from_home_5">
               <option value="Yes">Yes</option>
@@ -828,6 +839,7 @@
         </tr>
 
         <tr>
+          <td>F</td>
           <td>
             <select name="Relationship_6">
               <option value="Self">Self</option>
@@ -840,6 +852,13 @@
               <option value="others">others</option>
             </select>
           </td>
+          <td>
+            <select class="" name="Respondent_6">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </td>
+
           <td>
             <input type="number" min="1" max="120" name="Age_6" />
           </td>
@@ -872,15 +891,15 @@
             </select>
           </td>
           <td>
-            <select class="" name="Occupation_6">
-              <option value="Empty"></option>
+            <input type="text" name="Occupation_6" />
 
-            </select>
+
+
           </td>
           <td>
-            <select class="" name="Industry_6">
-              <option value="Empty"></option>
-            </select>
+            <input type="text" name="Industry_6" />
+
+
           </td>
           <td>
             <select class="" name="Education_6">
@@ -893,12 +912,6 @@
           </td>
           <td>
             <select class="" name="Disability_6">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </td>
-          <td>
-            <select class="" name="Respondent_6">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>

@@ -99,76 +99,89 @@ def submit_agree():
         d['Member_in_household_2']=request.form['Member_in_household_2']
         d['Temporary_in_household_2']=request.form['Temporary_in_household_2']
 
+        d['Relationship_3']=request.form['Relationship_3']
+        d['Age_3']=request.form['Age_3']
+        d['Gender_3']=request.form['Gender_3']
+        d['Marital_Status_3']=request.form['Marital_Status_3']
+        d['Employment_Status_3']=request.form['Employment_Status_3']
+        d['Occupation_3']=request.form['Occupation_3']
+        d['Industry_3']=request.form['Industry_3']
+        d['Education_3']=request.form['Education_3']
+        d['Disability_3']=request.form['Disability_3']
+        d['Respondent_3']=request.form['Respondent_3']
+        d['Work_from_home_3']=request.form['Work_from_home_3']
+        d['Member_in_household_3']=request.form['Member_in_household_3']
+        d['Temporary_in_household_3']=request.form['Temporary_in_household_3']
+
+
+
         #21
-        d['Self_Care_bool']=request.form['Self_Care_bool']
         d['Self_Care_total_hr']=request.form['Self_Care_total_hr']
         d['Self_Care_avg_hr']=request.form['Self_Care_avg_hr']
 
-        d['Travel_bool']=request.form['Travel_bool']
         d['Travel_total_hr']=request.form['Travel_total_hr']
         d['Travel_avg_hr']=request.form['Travel_avg_hr']
 
-        d['Work_bool']=request.form['Work_bool']
+
         d['Work_total_time']=request.form['Work_total_time']
         d['Work_avg_time']=request.form['Work_avg_time']
 
-        d['Eating_bool']=request.form['Eating_bool']
+
         d['Eating_total_time']=request.form['Eating_total_time']
         d['Eating_avg_time']=request.form['Eating_avg_time']
 
-        d['Sleeping_bool']=request.form['Sleeping_bool']
+
         d['Sleeping_total_time']=request.form['Sleeping_total_time']
         d['Sleeping_avg_time']=request.form['Sleeping_avg_time']
 
-        d['Studying_bool']=request.form['Studying_bool']
+
         d['Studying_total_time']=request.form['Studying_total_time']
         d['Studying_avg_time']=request.form['Studying_avg_time']
 
-        d['Leisure_bool']=request.form['Leisure_bool']
+
         d['Leisure_total_time']=request.form['Leisure_total_time']
         d['Leisure_avg_time']=request.form['Leisure_avg_time']
 
-        d['Job_searching_bool']=request.form['Job_searching_bool']
         d['Job_searching_total_time']=request.form['Job_searching_total_time']
         d['Job_searching_avg_time']=request.form['Job_searching_avg_time']
 
-        d['Household_work_bool']=request.form['Household_work_bool']
+
         d['Household_work_total_time']=request.form['Household_work_total_time']
         d['Household_work_avg_time']=request.form['Household_work_avg_time']
 
-        d['Cooking_bool']=request.form['Cooking_bool']
+
         d['Cooking_total_time']=request.form['Cooking_total_time']
         d['Cooking_avg_time']=request.form['Cooking_avg_time']
 
-        d['Utensils_clean_bool']=request.form['Utensils_clean_bool']
+
         d['Utensils_clean_total_time']=request.form['Utensils_clean_total_time']
         d['Utensils_clean_avg_time']=request.form['Utensils_clean_avg_time']
 
-        d['Washing_clothes_bool']=request.form['Washing_clothes_bool']
+
         d['Washing_clothes_total_time']=request.form['Washing_clothes_total_time']
         d['Washing_clothes_avg_time']=request.form['Washing_clothes_avg_time']
 
-        d['Ironing_clothes_bool']=request.form['Ironing_clothes_bool']
+
         d['Ironing_clothes_total_time']=request.form['Ironing_clothes_total_time']
         d['Ironing_clothes_avg_time']=request.form['Ironing_clothes_avg_time']
 
-        d['Household_clean_bool']=request.form['Household_clean_bool']
+
         d['Household_clean_total_time']=request.form['Household_clean_total_time']
         d['Household_clean_avg_time']=request.form['Household_clean_avg_time']
 
-        d['Teaching_children_bool']=request.form['Teaching_children_bool']
+
         d['Teaching_children_total_time']=request.form['Teaching_children_total_time']
         d['Teaching_children_avg_time']=request.form['Teaching_children_avg_time']
 
-        d['Elderly_person_care_bool']=request.form['Elderly_person_care_bool']
+
         d['Elderly_person_care_total_time']=request.form['Elderly_person_care_total_time']
         d['Elderly_person_care_avg_time']=request.form['Elderly_person_care_avg_time']
 
-        d['Shoping_bool']=request.form['Shoping_bool']
+
         d['Shoping_total_time']=request.form['Shoping_total_time']
         d['Shoping_avg_time']=request.form['Shoping_avg_time']
 
-        d['Outside_time_bool']=request.form['Outside_time_bool']
+
         d['Outside_time_total_time']=request.form['Outside_time_total_time']
         d['Outside_time_avg_time']=request.form['Outside_time_avg_time']
 
@@ -181,6 +194,13 @@ def submit_agree():
         d['Brooming_activity']=request.form['Brooming_activity']
         d['Mopping_activity']=request.form['Mopping_activity']
         d['Children_activity']=request.form['Children_activity']
+
+        d['City_town_lockdown']=request.form['City_town_lockdown']
+        d['Covid19_duration']=request.form['Covid19_duration']
+        d['Covid19_after_effects']=str(request.form.getlist('Covid19_after_effects'))
+        d['Economy_rise']=request.form['Economy_rise']
+        d['Govt_measures']=str(request.form.getlist('Govt_measures'))
+        d['Travel_will']=request.form['Travel_will']
 
         d['Primary_key']=str(datetime.datetime.now())
 
@@ -216,7 +236,58 @@ def submit_agree():
                      d['Driver_use'],
                      d['Covid19_infected'],
                      d['Covid19_lost_job'],
-                     d['Domestic_help_available']]
+                     d['Self_Care_total_hr'],
+                     d['Self_Care_avg_hr'],
+                     d['Travel_total_hr'],
+                     d['Travel_avg_hr'],
+                     d['Work_total_time'],
+                     d['Work_avg_time'],
+                     d['Eating_total_time'],
+                     d['Eating_avg_time'],
+                     d['Sleeping_total_time'],
+                     d['Sleeping_avg_time'],
+                     d['Studying_total_time'],
+                     d['Studying_avg_time'],
+                     d['Leisure_total_time'],
+                     d['Leisure_avg_time'],
+                     d['Job_searching_total_time'],
+                     d['Job_searching_avg_time'],
+                     d['Household_work_total_time'],
+                     d['Household_work_avg_time'],
+                     d['Cooking_total_time'],
+                     d['Cooking_avg_time'],
+                     d['Utensils_clean_total_time'],
+                     d['Utensils_clean_avg_time'],
+                     d['Washing_clothes_total_time'],
+                     d['Washing_clothes_avg_time'],
+                     d['Ironing_clothes_total_time'],
+                     d['Ironing_clothes_avg_time'],
+                     d['Household_clean_total_time'],
+                     d['Household_clean_avg_time'],
+                     d['Teaching_children_total_time'],
+                     d['Teaching_children_avg_time'],
+                     d['Elderly_person_care_total_time'],
+                     d['Elderly_person_care_avg_time'],
+                     d['Shoping_total_time'],
+                     d['Shoping_avg_time'],
+                     d['Outside_time_total_time'],
+                     d['Outside_time_avg_time'],
+                     d['Domestic_help_available'],
+                     d['Preparing_food_activity'],
+                     d['Cleaning_food_activity'],
+                     d['Cleaning_clothes_activity'],
+                     d['Folding_clothes_activity'],
+                     d['Ironing_clothes_activity'],
+                     d['Brooming_activity'],
+                     d['Mopping_activity'],
+                     d['Children_activity'],
+                     d['City_town_lockdown'],
+                     d['Covid19_duration'],
+                     d['Covid19_after_effects'],
+                     d['Economy_rise'],
+                     d['Govt_measures'],
+                     d['Travel_will']]
+
 
 
         sheet.insert_row(insertRow,no_rows+2)
@@ -225,7 +296,7 @@ def submit_agree():
 
 
 
-        sheet = client.open("Detail_Report").sheet1
+        sheet = client.open("Individual_Report").sheet1
         data = sheet.get_all_records()
         no_rows=len(data)
 
@@ -256,88 +327,8 @@ def submit_agree():
                      d['Respondent_2'],
                      d['Work_from_home_2'],
                      d['Member_in_household_2'],
-                     d['Temporary_in_household_2'],
+                     d['Temporary_in_household_2']]
 
-                     d['Self_Care_bool'],
-                     d['Self_Care_total_hr'],
-                     d['Self_Care_avg_hr'],
-
-                     d['Travel_bool'],
-                     d['Travel_total_hr'],
-                     d['Travel_avg_hr'],
-
-                     d['Work_bool'],
-                     d['Work_total_time'],
-                     d['Work_avg_time'],
-
-                     d['Eating_bool'],
-                     d['Eating_total_time'],
-                     d['Eating_avg_time'],
-
-                     d['Sleeping_bool'],
-                     d['Sleeping_total_time'],
-                     d['Sleeping_avg_time'],
-
-                     d['Studying_bool'],
-                     d['Studying_total_time'],
-                     d['Studying_avg_time'],
-
-                     d['Leisure_bool'],
-                     d['Leisure_total_time'],
-                     d['Leisure_avg_time'],
-
-                     d['Job_searching_bool'],
-                     d['Job_searching_total_time'],
-                     d['Job_searching_avg_time'],
-
-                     d['Household_work_bool'],
-                     d['Household_work_total_time'],
-                     d['Household_work_avg_time'],
-
-                     d['Cooking_bool'],
-                     d['Cooking_total_time'],
-                     d['Cooking_avg_time'],
-
-                     d['Utensils_clean_bool'],
-                     d['Utensils_clean_total_time'],
-                     d['Utensils_clean_avg_time'],
-
-                     d['Washing_clothes_bool'],
-                     d['Washing_clothes_total_time'],
-                     d['Washing_clothes_avg_time'],
-
-                     d['Ironing_clothes_bool'],
-                     d['Ironing_clothes_total_time'],
-                     d['Ironing_clothes_avg_time'],
-
-                     d['Household_clean_bool'],
-                     d['Household_clean_total_time'],
-                     d['Household_clean_avg_time'],
-
-                     d['Teaching_children_bool'],
-                     d['Teaching_children_total_time'],
-                     d['Teaching_children_avg_time'],
-
-                     d['Elderly_person_care_bool'],
-                     d['Elderly_person_care_total_time'],
-                     d['Elderly_person_care_avg_time'],
-
-                     d['Shoping_bool'],
-                     d['Shoping_total_time'],
-                     d['Shoping_avg_time'],
-
-                     d['Outside_time_bool'],
-                     d['Outside_time_total_time'],
-                     d['Outside_time_avg_time'],
-
-                     d['Preparing_food_activity'],
-                     d['Cleaning_food_activity'],
-                     d['Cleaning_clothes_activity'],
-                     d['Folding_clothes_activity'],
-                     d['Ironing_clothes_activity'],
-                     d['Brooming_activity'],
-                     d['Mopping_activity'],
-                     d['Children_activity'] ]
 
 
 
@@ -363,6 +354,25 @@ def submit_disagree():
         d['Resident_2']=request.form['Resident2']
         d['Income']=request.form['Income']
         d['Reason']=request.form['Reason']
+
+        d['Primary_key']=str(datetime.datetime.now())
+
+        scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
+        creds = ServiceAccountCredentials.from_json_keyfile_name("creds_1.json", scope)
+        client = gspread.authorize(creds)
+        sheet = client.open("Disagree_Report").sheet1
+        data = sheet.get_all_records()
+        no_rows=len(data)
+
+        insertRow=[d['Primary_key'],
+                   d['Resident_1'],
+                   d['Resident_2'],
+                   d['Income'],
+                   d['Reason']]
+
+
+
+        sheet.insert_row(insertRow,no_rows+2)
 
         return render_template('submit_disagree.html')
 
