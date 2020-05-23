@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script type="text/javascript" src="../static/my_js.js"></script>
     <link href="../static/my_css.css" rel="stylesheet" type="text/css">
+    <link href="../static/balloon.min.css" rel="stylesheet" type="text/css">
     <title>Survey</title>
   </head>
   <body>
@@ -33,7 +34,7 @@
     <div class="section">
       <label>
         1.	Number of People presently in the household (please include all, including small children)
-        <input type="number" min="1" required name="Resident1" />
+        <input type="number" min="1" required name="Resident1" id="Resident1" oninput="disableTable18();"/>
       </label>
     </div>
 
@@ -292,30 +293,18 @@
     </div>
 
     <div class="section">
-      <label>17. b.	Driver helps in
-        </br>
-        <input type="radio" required name="Driver_use" id="Driver_use1" value="Taking me and family members places"/>
-        <label>Taking me and family members places</label>
-
-        </br>
-        <input type="radio" required name="Driver_use" id="Driver_use2" value="Doing groceries"/>
-        <label>Doing groceries</label>
-
-        </br>
-        <input type="radio" required name="Driver_use" id="Driver_use3" value="Other random chores"/>
-        <label>Other random chores</label>
-
-        </br>
-        <input type="radio" required name="Driver_use" id="Driver_use4" value="No Help"/>
-        <label>No Help</label>
-      </label>
+      <label>17 b.Driver helps</label></br>
+      <input type="checkbox" name="Driver_use" id="Driver_use1" value="Taking me and Family places"> <label>Taking me and Family places</label></br>
+      <input type="checkbox" name="Driver_use" id="Driver_use2" value="Doing groceries"> <label>Doing groceries</label></br>
+      <input type="checkbox" name="Driver_use" id="Driver_use3" value="Other random chores"> <label>Other random chores</label></br>
+      <input type="checkbox" name="Driver_use" id="Driver_use4" value="No help"> <label>No help</label></br>
 
     </div>
 
     <div class="section">
       <label>18. Please fill in the following particulars for all the presently resident members of the household:</label>
       </br>
-      <table id="my_table">
+      <table id="my_table_1">
         <tr>
           <td>Sl no</td>
           <td>Relationship to head</td>
@@ -337,7 +326,7 @@
         <tr>
           <td>A</td>
           <td>
-            <select name="Relationship_1">
+            <select name="Relationship_1" id="Relationship_1">
               <option value="Self">Self</option>
               <option value="Spouse">Spouse</option>
               <option value="Child">Child</option>
@@ -349,23 +338,23 @@
             </select>
           </td>
           <td>
-            <select class="" name="Respondent_1">
+            <select class="" name="Respondent_1" id="Respondent_1">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
           <td>
-            <input type="number" min="1" max="120" name="Age_1" />
+            <input type="number" min="1" max="120" name="Age_1" id="Age_1" onchange="disableTable21_1();"/>
           </td>
           <td>
-            <select name="Gender_1">
+            <select name="Gender_1" id="Gender_1">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Others">Others</option>
             </select>
           </td>
           <td>
-            <select class="" name="Marital_Status_1">
+            <select class="" name="Marital_Status_1" id="Marital_Status_1">
               <option value="Married-cohatiting with partner">Married-cohatiting with partner</option>
               <option value="Married - living apart">Married - living apart</option>
               <option value="Single - never married">Single - never married</option>
@@ -375,7 +364,7 @@
             </select>
           </td>
           <td>
-            <select class="" name="Employment_Status_1">
+            <select class="" name="Employment_Status_1" id="Employment_Status_1" onchange="disableOccupationIndustry();">
               <option value="Full-time">Full-time</option>
               <option value="Part-time">Part-time</option>
               <option value="Employed">Employed</option>
@@ -386,16 +375,16 @@
             </select>
           </td>
           <td>
-            <input type="text" name="Occupation_1" />
+            <input type="text" name="Occupation_1" id="Occupation_1" />
 
 
           </td>
           <td>
-            <input type="text" name="Industry_1" />
+            <input type="text" name="Industry_1" id="Industry_1" />
 
           </td>
           <td>
-            <select class="" name="Education_1">
+            <select class="" name="Education_1" id="Education_1">
               <option value="Primary or below">Primary or below</option>
               <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
               <option value="Between secondary & including HS">Between secondary & including HS</option>
@@ -404,26 +393,29 @@
             </select>
           </td>
           <td>
-            <select class="" name="Disability_1">
-              <option value="Yes">Yes</option>
+            <select class="" name="Disability_1" id="Disability_1">
+
               <option value="No">No</option>
+              <option value="Yes">Yes</option>
             </select>
           </td>
 
           <td>
-            <select class="" name="Work_from_home_1">
+            <select class="" name="Work_from_home_1" id="Work_from_home_1">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
           <td>
-            <select class="" name="Member_in_household_1">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
+            <select class="" name="Member_in_household_1" id="Member_in_household_1">
+              <option value="Never">Never</option>
+              <option value="Rarely">Rarely</option>
+              <option value="Regularly">Regularly</option>
+              <option value="NA">NA</option>
             </select>
           </td>
           <td>
-            <select class="" name="Temporary_in_household_1">
+            <select class="" name="Temporary_in_household_1" id="Temporary_in_household_1">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -436,7 +428,7 @@
         <tr>
           <td>B</td>
           <td>
-            <select name="Relationship_2">
+            <select name="Relationship_2" id="Relationship_2">
               <option value="Self">Self</option>
               <option value="Spouse">Spouse</option>
               <option value="Child">Child</option>
@@ -448,23 +440,23 @@
             </select>
           </td>
           <td>
-            <select class="" name="Respondent_2">
+            <select class="" name="Respondent_2" id="Respondent_2">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
           <td>
-            <input type="number" min="1" max="120" name="Age_2" />
+            <input type="number" min="1" max="120" name="Age_2" id="Age_2" onchange="disableTable21_2();" />
           </td>
           <td>
-            <select name="Gender_2">
+            <select name="Gender_2" id="Gender_2">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Others">Others</option>
             </select>
           </td>
           <td>
-            <select class="" name="Marital_Status_2">
+            <select class="" name="Marital_Status_2" id="Marital_Status_2">
               <option value="Married-cohatiting with partner">Married-cohatiting with partner</option>
               <option value="Married - living apart">Married - living apart</option>
               <option value="Single - never married">Single - never married</option>
@@ -474,7 +466,7 @@
             </select>
           </td>
           <td>
-            <select class="" name="Employment_Status_2">
+            <select class="" name="Employment_Status_2" id="Employment_Status_2" onchange="disableOccupationIndustry();">
               <option value="Full-time">Full-time</option>
               <option value="Part-time">Part-time</option>
               <option value="Employed">Employed</option>
@@ -485,18 +477,18 @@
             </select>
           </td>
           <td>
-            <input type="text" name="Occupation_2" />
+            <input type="text" name="Occupation_2" id="Occupation_2" />
 
 
 
           </td>
           <td>
-            <input type="text" name="Industry_2" />
+            <input type="text" name="Industry_2" id="Industry_2" />
 
 
           </td>
           <td>
-            <select class="" name="Education_2">
+            <select class="" name="Education_2" id="Education_2">
               <option value="Primary or below">Primary or below</option>
               <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
               <option value="Between secondary & including HS">Between secondary & including HS</option>
@@ -505,26 +497,29 @@
             </select>
           </td>
           <td>
-            <select class="" name="Disability_2">
-              <option value="Yes">Yes</option>
+            <select class="" name="Disability_2" id="Disability_2">
+
               <option value="No">No</option>
+              <option value="Yes">Yes</option>
             </select>
           </td>
 
           <td>
-            <select class="" name="Work_from_home_2">
+            <select class="" name="Work_from_home_2" id="Work_from_home_2">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
           <td>
-            <select class="" name="Member_in_household_2">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
+            <select class="" name="Member_in_household_2" id="Member_in_household_2">
+              <option value="Never">Never</option>
+              <option value="Rarely">Rarely</option>
+              <option value="Regularly">Regularly</option>
+              <option value="NA">NA</option>
             </select>
           </td>
           <td>
-            <select class="" name="Temporary_in_household_2">
+            <select class="" name="Temporary_in_household_2" id="Temporary_in_household_2">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -537,7 +532,7 @@
         <tr>
           <td>C</td>
             <td>
-            <select name="Relationship_3">
+            <select name="Relationship_3" id="Relationship_3">
               <option value="Self">Self</option>
               <option value="Spouse">Spouse</option>
               <option value="Child">Child</option>
@@ -549,23 +544,23 @@
             </select>
           </td>
           <td>
-            <select class="" name="Respondent_3">
+            <select class="" name="Respondent_3" id="Respondent_3">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
           <td>
-            <input type="number" min="1" max="120" name="Age_3" />
+            <input type="number" min="1" max="120" name="Age_3" id="Age_3" onchange="disableTable21_3();" />
           </td>
           <td>
-            <select name="Gender_3">
+            <select name="Gender_3" id="Gender_3">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Others">Others</option>
             </select>
           </td>
           <td>
-            <select class="" name="Marital_Status_3">
+            <select class="" name="Marital_Status_3" id="Marital_Status_3">
               <option value="Married-cohatiting with partner">Married-cohatiting with partner</option>
               <option value="Married - living apart">Married - living apart</option>
               <option value="Single - never married">Single - never married</option>
@@ -575,7 +570,7 @@
             </select>
           </td>
           <td>
-            <select class="" name="Employment_Status_3">
+            <select class="" name="Employment_Status_3" id="Employment_Status_3" onchange="disableOccupationIndustry();">
               <option value="Full-time">Full-time</option>
               <option value="Part-time">Part-time</option>
               <option value="Employed">Employed</option>
@@ -586,18 +581,18 @@
             </select>
           </td>
           <td>
-            <input type="text" name="Occupation_3" />
+            <input type="text" name="Occupation_3" id="Occupation_3" />
 
 
 
           </td>
           <td>
-            <input type="text" name="Industry_3" />
+            <input type="text" name="Industry_3" id="Industry_3"/>
 
 
           </td>
           <td>
-            <select class="" name="Education_3">
+            <select class="" name="Education_3" id="Education_3">
               <option value="Primary or below">Primary or below</option>
               <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
               <option value="Between secondary & including HS">Between secondary & including HS</option>
@@ -606,26 +601,29 @@
             </select>
           </td>
           <td>
-            <select class="" name="Disability_3">
-              <option value="Yes">Yes</option>
+            <select class="" name="Disability_3" id="Disability_3">
+
               <option value="No">No</option>
+              <option value="Yes">Yes</option>
             </select>
           </td>
 
           <td>
-            <select class="" name="Work_from_home_3">
+            <select class="" name="Work_from_home_3" id="Work_from_home_3">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
           <td>
-            <select class="" name="Member_in_household_3">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
+            <select class="" name="Member_in_household_3" id="Member_in_household_3">
+              <option value="Never">Never</option>
+              <option value="Rarely">Rarely</option>
+              <option value="Regularly">Regularly</option>
+              <option value="NA">NA</option>
             </select>
           </td>
           <td>
-            <select class="" name="Temporary_in_household_3">
+            <select class="" name="Temporary_in_household_3" id="Temporary_in_household_3">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -638,7 +636,7 @@
         <tr>
           <td>D</td>
           <td>
-            <select name="Relationship_4">
+            <select name="Relationship_4" id="Relationship_4">
               <option value="Self">Self</option>
               <option value="Spouse">Spouse</option>
               <option value="Child">Child</option>
@@ -650,24 +648,24 @@
             </select>
           </td>
           <td>
-            <select class="" name="Respondent_4">
+            <select class="" name="Respondent_4" id="Respondent_4">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
 
           <td>
-            <input type="number" min="1" max="120" name="Age_4" />
+            <input type="number" min="1" max="120" name="Age_4" id="Age_4" onchange="disableTable21_4();" />
           </td>
           <td>
-            <select name="Gender_4">
+            <select name="Gender_4" id="Gender_4">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Others">Others</option>
             </select>
           </td>
           <td>
-            <select class="" name="Marital_Status_4">
+            <select class="" name="Marital_Status_4" id="Marital_Status_4">
               <option value="Married-cohatiting with partner">Married-cohatiting with partner</option>
               <option value="Married - living apart">Married - living apart</option>
               <option value="Single - never married">Single - never married</option>
@@ -677,7 +675,7 @@
             </select>
           </td>
           <td>
-            <select class="" name="Employment_Status_4">
+            <select class="" name="Employment_Status_4" id="Employment_Status_4" onchange="disableOccupationIndustry();">
               <option value="Full-time">Full-time</option>
               <option value="Part-time">Part-time</option>
               <option value="Employed">Employed</option>
@@ -688,18 +686,18 @@
             </select>
           </td>
           <td>
-            <input type="text" name="Occupation_4" />
+            <input type="text" name="Occupation_4" id="Occupation_4" />
 
 
 
           </td>
           <td>
-            <input type="text" name="Industry_4" />
+            <input type="text" name="Industry_4" id="Industry_4" />
 
 
           </td>
           <td>
-            <select class="" name="Education_4">
+            <select class="" name="Education_4" id="Education_4">
               <option value="Primary or below">Primary or below</option>
               <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
               <option value="Between secondary & including HS">Between secondary & including HS</option>
@@ -708,26 +706,29 @@
             </select>
           </td>
           <td>
-            <select class="" name="Disability_4">
-              <option value="Yes">Yes</option>
+            <select class="" name="Disability_4" id="Disability_4">
+
               <option value="No">No</option>
+              <option value="Yes">Yes</option>
             </select>
           </td>
 
           <td>
-            <select class="" name="Work_from_home_4">
+            <select class="" name="Work_from_home_4" id="Work_from_home_4">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
           <td>
-            <select class="" name="Member_in_household_4">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
+            <select class="" name="Member_in_household_4" id="Member_in_household_4">
+              <option value="Never">Never</option>
+              <option value="Rarely">Rarely</option>
+              <option value="Regularly">Regularly</option>
+              <option value="NA">NA</option>
             </select>
           </td>
           <td>
-            <select class="" name="Temporary_in_household_4">
+            <select class="" name="Temporary_in_household_4" id="Temporary_in_household_4">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -740,7 +741,7 @@
         <tr>
           <td>E</td>
           <td>
-            <select name="Relationship_5">
+            <select name="Relationship_5" id="Relationship_5">
               <option value="Self">Self</option>
               <option value="Spouse">Spouse</option>
               <option value="Child">Child</option>
@@ -752,24 +753,24 @@
             </select>
           </td>
           <td>
-            <select class="" name="Respondent_5">
+            <select class="" name="Respondent_5" id="Respondent_5">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
 
           <td>
-            <input type="number" min="1" max="120" name="Age_5" />
+            <input type="number" min="1" max="120" name="Age_5" id="Age_5" onchange="disableTable21_5();" />
           </td>
           <td>
-            <select name="Gender_5">
+            <select name="Gender_5" id="Gender_5">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Others">Others</option>
             </select>
           </td>
           <td>
-            <select class="" name="Marital_Status_5">
+            <select class="" name="Marital_Status_5" id="Marital_Status_5">
               <option value="Married-cohatiting with partner">Married-cohatiting with partner</option>
               <option value="Married - living apart">Married - living apart</option>
               <option value="Single - never married">Single - never married</option>
@@ -779,7 +780,7 @@
             </select>
           </td>
           <td>
-            <select class="" name="Employment_Status_5">
+            <select class="" name="Employment_Status_5" id="Employment_Status_5" onchange="disableOccupationIndustry();">
               <option value="Full-time">Full-time</option>
               <option value="Part-time">Part-time</option>
               <option value="Employed">Employed</option>
@@ -790,18 +791,18 @@
             </select>
           </td>
           <td>
-            <input type="text" name="Occupation_5" />
+            <input type="text" name="Occupation_5" id="Occupation_5" />
 
 
 
           </td>
           <td>
-            <input type="text" name="Industry_5" />
+            <input type="text" name="Industry_5" id="Industry_5" />
 
 
           </td>
           <td>
-            <select class="" name="Education_5">
+            <select class="" name="Education_5" id="Education_5">
               <option value="Primary or below">Primary or below</option>
               <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
               <option value="Between secondary & including HS">Between secondary & including HS</option>
@@ -810,26 +811,28 @@
             </select>
           </td>
           <td>
-            <select class="" name="Disability_5">
-              <option value="Yes">Yes</option>
+            <select class="" name="Disability_5" id="Disability_5">
+
               <option value="No">No</option>
+              <option value="Yes">Yes</option>
             </select>
           </td>
 
           <td>
-            <select class="" name="Work_from_home_5">
+            <select class="" name="Work_from_home_5" id="Work_from_home_5">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
           <td>
-            <select class="" name="Member_in_household_5">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
+            <select class="" name="Member_in_household_5" id="Member_in_household_5">
+              <option value="Never">Never</option>
+              <option value="Rarely">Rarely</option>
+              <option value="Regularly">Regularly</option>
+              <option value="NA">NA</option>            </select>
           </td>
           <td>
-            <select class="" name="Temporary_in_household_5">
+            <select class="" name="Temporary_in_household_5" id="Temporary_in_household_5">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -841,7 +844,7 @@
         <tr>
           <td>F</td>
           <td>
-            <select name="Relationship_6">
+            <select name="Relationship_6" id="Relationship_6">
               <option value="Self">Self</option>
               <option value="Spouse">Spouse</option>
               <option value="Child">Child</option>
@@ -853,24 +856,24 @@
             </select>
           </td>
           <td>
-            <select class="" name="Respondent_6">
+            <select class="" name="Respondent_6" id="Respondent_6">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
 
           <td>
-            <input type="number" min="1" max="120" name="Age_6" />
+            <input type="number" min="1" max="120" name="Age_6" id="Age_6" onchange="disableTable21_6();" />
           </td>
           <td>
-            <select name="Gender_6">
+            <select name="Gender_6" id="Gender_6">
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Others">Others</option>
             </select>
           </td>
           <td>
-            <select class="" name="Marital_Status_6">
+            <select class="" name="Marital_Status_6" id="Marital_Status_6">
               <option value="Married-cohatiting with partner">Married-cohatiting with partner</option>
               <option value="Married - living apart">Married - living apart</option>
               <option value="Single - never married">Single - never married</option>
@@ -880,7 +883,7 @@
             </select>
           </td>
           <td>
-            <select class="" name="Employment_Status_6">
+            <select class="" name="Employment_Status_6" id="Employment_Status_6" onchange="disableOccupationIndustry();">
               <option value="Full-time">Full-time</option>
               <option value="Part-time">Part-time</option>
               <option value="Employed">Employed</option>
@@ -891,18 +894,18 @@
             </select>
           </td>
           <td>
-            <input type="text" name="Occupation_6" />
+            <input type="text" name="Occupation_6" id="Occupation_6" />
 
 
 
           </td>
           <td>
-            <input type="text" name="Industry_6" />
+            <input type="text" name="Industry_6" id="Industry_6"/>
 
 
           </td>
           <td>
-            <select class="" name="Education_6">
+            <select class="" name="Education_6" id="Education_6">
               <option value="Primary or below">Primary or below</option>
               <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
               <option value="Between secondary & including HS">Between secondary & including HS</option>
@@ -911,25 +914,28 @@
             </select>
           </td>
           <td>
-            <select class="" name="Disability_6">
+            <select class="" name="Disability_6" id="Disability_6">
+
+              <option value="No">No</option>
+              <option value="Yes">Yes</option>
+            </select>
+          </td>
+          <td>
+            <select class="" name="Work_from_home_6" id="Work_from_home_6">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
           <td>
-            <select class="" name="Work_from_home_6">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
+            <select class="" name="Member_in_household_6" id="Member_in_household_6">
+              <option value="Never">Never</option>
+              <option value="Rarely">Rarely</option>
+              <option value="Regularly">Regularly</option>
+              <option value="NA">NA</option>
             </select>
           </td>
           <td>
-            <select class="" name="Member_in_household_6">
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </td>
-          <td>
-            <select class="" name="Temporary_in_household_6">
+            <select class="" name="Temporary_in_household_6" id="Temporary_in_household_6">
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -970,31 +976,31 @@
 
     <div class="section">
       <label>21.	In the last standard full workday (Monday through Friday), I spent time on the following activities for the time indicated (If an activity is not done, please put in 0 for the total time). </label>
-      </br>
-      <table id="my_table">
+    </br></br>
+      <table id="my_table_21_1">
         <tr>
-          <td>Activity</td>
+          <td>Activity Member 1</td>
           <td>Total time spent (hrs)</td>
-          <td>If not done on reference day, average daily time spent on the activity during the week (hrs)</td>
+          <td>Avg time spent (hrs) <button data-balloon-length="medium" aria-label="If not done on reference day, average daily time spent on the activity during the week (hrs)" data-balloon-pos="left">?</button></td>
         </tr>
 
         <tr>
           <td>Self-care (including brushing, exercising)</td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Self_Care_total_hr" />
+            <input type="number" step="0.01" min="0.00" name="Self_Care_total_hr_1" id="Self_Care_total_hr_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Self_Care_avg_hr" />
+            <input type="number" step="0.01" min="0.00" name="Self_Care_avg_hr_1" id="Self_Care_avg_hr_1" />
           </td>
         </tr>
 
         <tr>
           <td>Travel (to/from work)</td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Travel_total_hr" />
+            <input type="number" step="0.01" min="0.00" name="Travel_total_hr_1" id="Travel_total_hr_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Travel_avg_hr" />
+            <input type="number" step="0.01" min="0.00" name="Travel_avg_hr_1" id="Travel_avg_hr_1" />
           </td>
 
         </tr>
@@ -1002,10 +1008,10 @@
         <tr>
           <td>Work</td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Work_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Work_total_time_1" id="Work_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Work_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Work_avg_time_1" id="Work_avg_time_1" />
           </td>
 
         </tr>
@@ -1014,10 +1020,10 @@
           <td>Eating</td>
 
           <td>
-            <input type="number" step="0.01" min="0.00" name="Eating_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Eating_total_time_1" id="Eating_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Eating_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Eating_avg_time_1" id="Eating_avg_time_1" />
           </td>
 
         </tr>
@@ -1025,10 +1031,10 @@
         <tr>
           <td>Sleeping</td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Sleeping_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Sleeping_total_time_1" id="Sleeping_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Sleeping_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Sleeping_avg_time_1" id="Sleeping_avg_time_1" />
           </td>
 
         </tr>
@@ -1036,23 +1042,23 @@
         <tr>
           <td>Studying</td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Studying_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Studying_total_time_1" id="Studying_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Studying_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Studying_avg_time_1" id="Studying_avg_time_1" />
           </td>
 
         </tr>
 
         <tr>
-          <td>Leisure-related activities (Chatting with family members
-Internet surfing, watching television, Leisure reading (newspapers, fiction, non-fiction), talking on phone (audio/video))
+          <td>Leisure <button data-balloon-length="medium" aria-label="(Chatting with family members
+Internet surfing, watching television, Leisure reading (newspapers, fiction, non-fiction), talking on phone (audio/video))" data-balloon-pos="up">?</button>
 </td>
 <td>
-  <input type="number" step="0.01" min="0.00" name="Leisure_total_time" />
+  <input type="number" step="0.01" min="0.00" name="Leisure_total_time_1" id="Leisure_total_time_1" />
 </td>
 <td>
-  <input type="number" step="0.01" min="0.00" name="Leisure_avg_time" />
+  <input type="number" step="0.01" min="0.00" name="Leisure_avg_time_1" id="Leisure_avg_time_1" />
 </td>
 
         </tr>
@@ -1060,10 +1066,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Searching for Job</td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Job_searching_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Job_searching_total_time_1" id="Job_searching_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Job_searching_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Job_searching_avg_time_1" id="Job_searching_avg_time_1" />
           </td>
 
         </tr>
@@ -1071,10 +1077,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Household work</td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Household_work_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Household_work_total_time_1" id="Household_work_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Household_work_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Household_work_avg_time_1" id="Household_work_avg_time_1" />
           </td>
 
         </tr>
@@ -1082,10 +1088,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Cooking, preparing food</td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Cooking_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Cooking_total_time_1" id="Cooking_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Cooking_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Cooking_avg_time_1" id="Cooking_avg_time_1" />
           </td>
 
         </tr>
@@ -1094,10 +1100,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
           <td>Cleaning utensils</td>
 
           <td>
-            <input type="number" step="0.01" min="0.00" name="Utensils_clean_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Utensils_clean_total_time_1" id="Utensils_clean_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Utensils_clean_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Utensils_clean_avg_time_1" id="Utensils_clean_avg_time_1" />
           </td>
 
         </tr>
@@ -1106,10 +1112,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
           <td>Washing Clothes</td>
 
           <td>
-            <input type="number" step="0.01" min="0.00" name="Washing_clothes_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Washing_clothes_total_time_1" id="Washing_clothes_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Washing_clothes_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Washing_clothes_avg_time_1" id="Washing_clothes_avg_time_1" />
           </td>
 
         </tr>
@@ -1117,10 +1123,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Folding/Ironing clothes</td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Ironing_clothes_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Ironing_clothes_total_time_1" id="Ironing_clothes_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Ironing_clothes_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Ironing_clothes_avg_time_1" id="Ironing_clothes_avg_time_1" />
           </td>
 
         </tr>
@@ -1128,10 +1134,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Cleaning household (brooming, mopping)</td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Household_clean_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Household_clean_total_time_1" id="Household_clean_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Household_clean_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Household_clean_avg_time_1" id="Household_clean_avg_time_1" />
           </td>
 
         </tr>
@@ -1139,10 +1145,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Teaching children</td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Teaching_children_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Teaching_children_total_time_1" id="Teaching_children_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Teaching_children_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Teaching_children_avg_time_1" id="Teaching_children_avg_time_1" />
           </td>
 
         </tr>
@@ -1150,10 +1156,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Taking care of elderly/disabled/patients</td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Elderly_person_care_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Elderly_person_care_total_time_1" id="Elderly_person_care_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Elderly_person_care_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Elderly_person_care_avg_time_1" id="Elderly_person_care_avg_time_1" />
           </td>
 
         </tr>
@@ -1161,10 +1167,10 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Buying groceries or shopping (online/offline)</td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Shoping_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Shoping_total_time_1" id="Shoping_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Shoping_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Shoping_avg_time_1" id="Shoping_avg_time_1" />
           </td>
 
         </tr>
@@ -1172,16 +1178,1078 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         <tr>
           <td>Stepping out for household errands</td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Outside_time_total_time" />
+            <input type="number" step="0.01" min="0.00" name="Outside_time_total_time_1" id="Outside_time_total_time_1" />
           </td>
           <td>
-            <input type="number" step="0.01" min="0.00" name="Outside_time_avg_time" />
+            <input type="number" step="0.01" min="0.00" name="Outside_time_avg_time_1" id="Outside_time_avg_time_1" />
           </td>
 
         </tr>
 
 
       </table>
+
+    </br></br>
+      <table id="my_table_21_2">
+        <tr>
+          <td>Activity Member 2</td>
+          <td>Total time spent (hrs)</td>
+          <td>Avg time spent (hrs) <button data-balloon-length="medium" aria-label="If not done on reference day, average daily time spent on the activity during the week (hrs)" data-balloon-pos="left">?</button></td>
+        </tr>
+
+        <tr>
+          <td>Self-care (including brushing, exercising)</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Self_Care_total_hr_2" id="Self_Care_total_hr_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Self_Care_avg_hr_2" id="Self_Care_avg_hr_2" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Travel (to/from work)</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Travel_total_hr_2" id="Travel_total_hr_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Travel_avg_hr_2" id="Travel_avg_hr_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Work</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Work_total_time_2" id="Work_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Work_avg_time_2" id="Work_avg_time_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Eating</td>
+
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Eating_total_time_2" id="Eating_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Eating_avg_time_2" id="Eating_avg_time_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Sleeping</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Sleeping_total_time_2" id="Sleeping_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Sleeping_avg_time_2" id="Sleeping_avg_time_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Studying</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Studying_total_time_2" id="Studying_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Studying_avg_time_2" id="Studying_avg_time_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Leisure <button data-balloon-length="medium" aria-label="(Chatting with family members
+Internet surfing, watching television, Leisure reading (newspapers, fiction, non-fiction), talking on phone (audio/video))" data-balloon-pos="up">?</button>
+</td>
+<td>
+  <input type="number" step="0.01" min="0.00" name="Leisure_total_time_2" id="Leisure_total_time_2" />
+</td>
+<td>
+  <input type="number" step="0.01" min="0.00" name="Leisure_avg_time_2" id="Leisure_avg_time_2" />
+</td>
+
+        </tr>
+
+        <tr>
+          <td>Searching for Job</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Job_searching_total_time_2" id="Job_searching_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Job_searching_avg_time_2" id="Job_searching_avg_time_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Household work</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Household_work_total_time_2" id="Household_work_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Household_work_avg_time_2" id="Household_work_avg_time_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Cooking, preparing food</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Cooking_total_time_2" id="Cooking_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Cooking_avg_time_2" id="Cooking_avg_time_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Cleaning utensils</td>
+
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Utensils_clean_total_time_2" id="Utensils_clean_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Utensils_clean_avg_time_2" id="Utensils_clean_avg_time_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Washing Clothes</td>
+
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Washing_clothes_total_time_2" id="Washing_clothes_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Washing_clothes_avg_time_2" id="Washing_clothes_avg_time_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Folding/Ironing clothes</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Ironing_clothes_total_time_2" id="Ironing_clothes_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Ironing_clothes_avg_time_2" id="Ironing_clothes_avg_time_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Cleaning household (brooming, mopping)</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Household_clean_total_time_2" id="Household_clean_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Household_clean_avg_time_2" id="Household_clean_avg_time_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Teaching children</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Teaching_children_total_time_2" id="Teaching_children_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Teaching_children_avg_time_2" id="Teaching_children_avg_time_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Taking care of elderly/disabled/patients</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Elderly_person_care_total_time_2" id="Elderly_person_care_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Elderly_person_care_avg_time_2" id="Elderly_person_care_avg_time_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Buying groceries or shopping (online/offline)</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Shoping_total_time_2" id="Shoping_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Shoping_avg_time_2" id="Shoping_avg_time_2" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Stepping out for household errands</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Outside_time_total_time_2" id="Outside_time_total_time_2" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Outside_time_avg_time_2" id="Outside_time_avg_time_2" />
+          </td>
+
+        </tr>
+
+
+      </table>
+
+    </br></br>
+      <table id="my_table">
+        <tr>
+          <td>Activity Member 3</td>
+          <td>Total time spent (hrs)</td>
+          <td>Avg time spent (hrs) <button data-balloon-length="medium" aria-label="If not done on reference day, average daily time spent on the activity during the week (hrs)" data-balloon-pos="left">?</button></td>
+        </tr>
+
+        <tr>
+          <td>Self-care (including brushing, exercising)</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Self_Care_total_hr_3" id="Self_Care_total_hr_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Self_Care_avg_hr_3" id="Self_Care_avg_hr_3" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Travel (to/from work)</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Travel_total_hr_3" id="Travel_total_hr_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Travel_avg_hr_3" id="Travel_avg_hr_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Work</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Work_total_time_3" id="Work_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Work_avg_time_3" id="Work_avg_time_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Eating</td>
+
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Eating_total_time_3" id="Eating_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Eating_avg_time_3" id="Eating_avg_time_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Sleeping</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Sleeping_total_time_3" id="Sleeping_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Sleeping_avg_time_3" id="Sleeping_avg_time_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Studying</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Studying_total_time_3" id="Studying_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Studying_avg_time_3" id="Studying_avg_time_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Leisure <button data-balloon-length="medium" aria-label="(Chatting with family members
+Internet surfing, watching television, Leisure reading (newspapers, fiction, non-fiction), talking on phone (audio/video))" data-balloon-pos="up">?</button>
+</td>
+<td>
+  <input type="number" step="0.01" min="0.00" name="Leisure_total_time_3" id="Leisure_total_time_3" />
+</td>
+<td>
+  <input type="number" step="0.01" min="0.00" name="Leisure_avg_time_3" id="Leisure_avg_time_3" />
+</td>
+
+        </tr>
+
+        <tr>
+          <td>Searching for Job</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Job_searching_total_time_3" id="Job_searching_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Job_searching_avg_time_3" id="Job_searching_avg_time_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Household work</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Household_work_total_time_3" id="Household_work_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Household_work_avg_time_3" id="Household_work_avg_time_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Cooking, preparing food</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Cooking_total_time_3" id="Cooking_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Cooking_avg_time_3" id="Cooking_avg_time_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Cleaning utensils</td>
+
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Utensils_clean_total_time_3" id="Utensils_clean_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Utensils_clean_avg_time_3" id="Utensils_clean_avg_time_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Washing Clothes</td>
+
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Washing_clothes_total_time_3" id="Washing_clothes_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Washing_clothes_avg_time_3" id="Washing_clothes_avg_time_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Folding/Ironing clothes</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Ironing_clothes_total_time_3" id="Ironing_clothes_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Ironing_clothes_avg_time_3" id="Ironing_clothes_avg_time_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Cleaning household (brooming, mopping)</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Household_clean_total_time_3" id="Household_clean_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Household_clean_avg_time_3" id="Household_clean_avg_time_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Teaching children</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Teaching_children_total_time_3" id="Teaching_children_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Teaching_children_avg_time_3" id="Teaching_children_avg_time_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Taking care of elderly/disabled/patients</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Elderly_person_care_total_time_3" id="Elderly_person_care_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Elderly_person_care_avg_time_3" id="Elderly_person_care_avg_time_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Buying groceries or shopping (online/offline)</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Shoping_total_time_3" id="Shoping_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Shoping_avg_time_3" id="Shoping_avg_time_3" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Stepping out for household errands</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Outside_time_total_time_3" id="Outside_time_total_time_3" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Outside_time_avg_time_3" id="Outside_time_avg_time_3" />
+          </td>
+
+        </tr>
+
+
+      </table>
+    </br></br>
+      <table id="my_table">
+        <tr>
+          <td>Activity Member 4</td>
+          <td>Total time spent (hrs)</td>
+          <td>Avg time spent (hrs) <button data-balloon-length="medium" aria-label="If not done on reference day, average daily time spent on the activity during the week (hrs)" data-balloon-pos="left">?</button></td>
+        </tr>
+
+        <tr>
+          <td>Self-care (including brushing, exercising)</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Self_Care_total_hr_4" id="Self_Care_total_hr_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Self_Care_avg_hr_4" id="Self_Care_avg_hr_4" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>Travel (to/from work)</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Travel_total_hr_4" id="Travel_total_hr_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Travel_avg_hr_4" id="Travel_avg_hr_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Work</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Work_total_time_4" id="Work_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Work_avg_time_4" id="Work_avg_time_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Eating</td>
+
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Eating_total_time_4" id="Eating_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Eating_avg_time_4" id="Eating_avg_time_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Sleeping</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Sleeping_total_time_4" id="Sleeping_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Sleeping_avg_time_4" id="Sleeping_avg_time_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Studying</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Studying_total_time_4" id="Studying_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Studying_avg_time_4" id="Studying_avg_time_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Leisure <button data-balloon-length="medium" aria-label="(Chatting with family members
+Internet surfing, watching television, Leisure reading (newspapers, fiction, non-fiction), talking on phone (audio/video))" data-balloon-pos="up">?</button>
+</td>
+<td>
+  <input type="number" step="0.01" min="0.00" name="Leisure_total_time_4" id="Leisure_total_time_4" />
+</td>
+<td>
+  <input type="number" step="0.01" min="0.00" name="Leisure_avg_time_4" id="Leisure_avg_time_4" />
+</td>
+
+        </tr>
+
+        <tr>
+          <td>Searching for Job</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Job_searching_total_time_4" id="Job_searching_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Job_searching_avg_time_4" id="Job_searching_avg_time_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Household work</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Household_work_total_time_4" id="Household_work_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Household_work_avg_time_4" id="Household_work_avg_time_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Cooking, preparing food</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Cooking_total_time_4" id="Cooking_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Cooking_avg_time_4" id="Cooking_avg_time_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Cleaning utensils</td>
+
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Utensils_clean_total_time_4" id="Utensils_clean_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Utensils_clean_avg_time_4" id="Utensils_clean_avg_time_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Washing Clothes</td>
+
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Washing_clothes_total_time_4" id="Washing_clothes_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Washing_clothes_avg_time_4" id="Washing_clothes_avg_time_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Folding/Ironing clothes</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Ironing_clothes_total_time_4" id="Ironing_clothes_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Ironing_clothes_avg_time_4" id="Ironing_clothes_avg_time_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Cleaning household (brooming, mopping)</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Household_clean_total_time_4" id="Household_clean_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Household_clean_avg_time_4" id="Household_clean_avg_time_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Teaching children</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Teaching_children_total_time_4" id="Teaching_children_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Teaching_children_avg_time_4" id="Teaching_children_avg_time_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Taking care of elderly/disabled/patients</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Elderly_person_care_total_time_4" id="Elderly_person_care_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Elderly_person_care_avg_time_4" id="Elderly_person_care_avg_time_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Buying groceries or shopping (online/offline)</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Shoping_total_time_4" id="Shoping_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Shoping_avg_time_4" id="Shoping_avg_time_4" />
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>Stepping out for household errands</td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Outside_time_total_time_4" id="Outside_time_total_time_4" />
+          </td>
+          <td>
+            <input type="number" step="0.01" min="0.00" name="Outside_time_avg_time_4" id="Outside_time_avg_time_4" />
+          </td>
+
+        </tr>
+
+      </table>
+    </br></br>
+        <table id="my_table">
+          <tr>
+            <td>Activity Member 5</td>
+            <td>Total time spent (hrs)</td>
+            <td>Avg time spent (hrs) <button data-balloon-length="medium" aria-label="If not done on reference day, average daily time spent on the activity during the week (hrs)" data-balloon-pos="left">?</button></td>
+          </tr>
+
+          <tr>
+            <td>Self-care (including brushing, exercising)</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Self_Care_total_hr_5" id="Self_Care_total_hr_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Self_Care_avg_hr_5" id="Self_Care_avg_hr_5" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Travel (to/from work)</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Travel_total_hr_5" id="Travel_total_hr_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Travel_avg_hr_5" id="Travel_avg_hr_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Work</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Work_total_time_5" id="Work_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Work_avg_time_5" id="Work_avg_time_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Eating</td>
+
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Eating_total_time_5" id="Eating_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Eating_avg_time_5" id="Eating_avg_time_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Sleeping</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Sleeping_total_time_5" id="Sleeping_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Sleeping_avg_time_5" id="Sleeping_avg_time_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Studying</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Studying_total_time_5" id="Studying_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Studying_avg_time_5" id="Studying_avg_time_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Leisure <button data-balloon-length="medium" aria-label="(Chatting with family members
+  Internet surfing, watching television, Leisure reading (newspapers, fiction, non-fiction), talking on phone (audio/video))" data-balloon-pos="up">?</button>
+  </td>
+  <td>
+    <input type="number" step="0.01" min="0.00" name="Leisure_total_time_5" id="Leisure_total_time_5" />
+  </td>
+  <td>
+    <input type="number" step="0.01" min="0.00" name="Leisure_avg_time_5" id="Leisure_avg_time_5" />
+  </td>
+
+          </tr>
+
+          <tr>
+            <td>Searching for Job</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Job_searching_total_time_5" id="Job_searching_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Job_searching_avg_time_5" id="Job_searching_avg_time_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Household work</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Household_work_total_time_5" id="Household_work_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Household_work_avg_time_5" id="Household_work_avg_time_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Cooking, preparing food</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Cooking_total_time_5" id="Cooking_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Cooking_avg_time_5" id="Cooking_avg_time_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Cleaning utensils</td>
+
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Utensils_clean_total_time_5" id="Utensils_clean_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Utensils_clean_avg_time_5" id="Utensils_clean_avg_time_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Washing Clothes</td>
+
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Washing_clothes_total_time_5" id="Washing_clothes_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Washing_clothes_avg_time_5" id="Washing_clothes_avg_time_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Folding/Ironing clothes</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Ironing_clothes_total_time_5" id="Ironing_clothes_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Ironing_clothes_avg_time_5" id="Ironing_clothes_avg_time_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Cleaning household (brooming, mopping)</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Household_clean_total_time_5" id="Household_clean_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Household_clean_avg_time_5" id="Household_clean_avg_time_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Teaching children</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Teaching_children_total_time_5" id="Teaching_children_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Teaching_children_avg_time_5" id="Teaching_children_avg_time_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Taking care of elderly/disabled/patients</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Elderly_person_care_total_time_5" id="Elderly_person_care_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Elderly_person_care_avg_time_5" id="Elderly_person_care_avg_time_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Buying groceries or shopping (online/offline)</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Shoping_total_time_5" id="Shoping_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Shoping_avg_time_5" id="Shoping_avg_time_5" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Stepping out for household errands</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Outside_time_total_time_5" id="Outside_time_total_time_5" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Outside_time_avg_time_5" id="Outside_time_avg_time_5" />
+            </td>
+
+          </tr>
+
+
+        </table>
+      </br></br>
+        <table id="my_table">
+          <tr>
+            <td>Activity Member 6</td>
+            <td>Total time spent (hrs)</td>
+            <td>Avg time spent (hrs) <button data-balloon-length="medium" aria-label="If not done on reference day, average daily time spent on the activity during the week (hrs)" data-balloon-pos="left">?</button></td>
+          </tr>
+
+          <tr>
+            <td>Self-care (including brushing, exercising)</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Self_Care_total_hr_6" id="Self_Care_total_hr_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Self_Care_avg_hr_6" id="Self_Care_avg_hr_6" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>Travel (to/from work)</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Travel_total_hr_6" id="Travel_total_hr_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Travel_avg_hr_6" id="Travel_avg_hr_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Work</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Work_total_time_6" id="Work_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Work_avg_time_6" id="Work_avg_time_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Eating</td>
+
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Eating_total_time_6" id="Eating_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Eating_avg_time_6" id="Eating_avg_time_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Sleeping</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Sleeping_total_time_6" id="Sleeping_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Sleeping_avg_time_6" id="Sleeping_avg_time_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Studying</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Studying_total_time_6" id="Studying_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Studying_avg_time_6" id="Studying_avg_time_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Leisure <button data-balloon-length="medium" aria-label="(Chatting with family members
+  Internet surfing, watching television, Leisure reading (newspapers, fiction, non-fiction), talking on phone (audio/video))" data-balloon-pos="up">?</button>
+  </td>
+  <td>
+    <input type="number" step="0.01" min="0.00" name="Leisure_total_time_6" id="Leisure_total_time_6" />
+  </td>
+  <td>
+    <input type="number" step="0.01" min="0.00" name="Leisure_avg_time_6" id="Leisure_avg_time_6" />
+  </td>
+
+          </tr>
+
+          <tr>
+            <td>Searching for Job</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Job_searching_total_time_6" id="Job_searching_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Job_searching_avg_time_6" id="Job_searching_avg_time_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Household work</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Household_work_total_time_6" id="Household_work_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Household_work_avg_time_6" id="Household_work_avg_time_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Cooking, preparing food</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Cooking_total_time_6" id="Cooking_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Cooking_avg_time_6" id="Cooking_avg_time_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Cleaning utensils</td>
+
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Utensils_clean_total_time_6" id="Utensils_clean_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Utensils_clean_avg_time_6" id="Utensils_clean_avg_time_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Washing Clothes</td>
+
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Washing_clothes_total_time_6" id="Washing_clothes_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Washing_clothes_avg_time_6" id="Washing_clothes_avg_time_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Folding/Ironing clothes</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Ironing_clothes_total_time_6" id="Ironing_clothes_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Ironing_clothes_avg_time_6" id="Ironing_clothes_avg_time_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Cleaning household (brooming, mopping)</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Household_clean_total_time_6" id="Household_clean_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Household_clean_avg_time_6" id="Household_clean_avg_time_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Teaching children</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Teaching_children_total_time_6" id="Teaching_children_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Teaching_children_avg_time_6" id="Teaching_children_avg_time_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Taking care of elderly/disabled/patients</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Elderly_person_care_total_time_6" id="Elderly_person_care_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Elderly_person_care_avg_time_6" id="Elderly_person_care_avg_time_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Buying groceries or shopping (online/offline)</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Shoping_total_time_6" id="Shoping_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Shoping_avg_time_6" id="Shoping_avg_time_6" />
+            </td>
+
+          </tr>
+
+          <tr>
+            <td>Stepping out for household errands</td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Outside_time_total_time_6" id="Outside_time_total_time_6" />
+            </td>
+            <td>
+              <input type="number" step="0.01" min="0.00" name="Outside_time_avg_time_6" id="Outside_time_avg_time_6" />
+            </td>
+
+          </tr>
+
+
+        </table>
+
     </div>
 
     <div class="section">
