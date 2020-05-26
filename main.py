@@ -252,7 +252,7 @@ def submit_agree():
         try: d['Temporary_in_household_6']=request.form['Temporary_in_household_6']
         except: d['Temporary_in_household_6']=''
 
-        #21
+        #19
         try: d['Self_Care_total_hr_1']=request.form['Self_Care_total_hr_1']
         except: d['Self_Care_total_hr_1']=''
         try: d['Self_Care_avg_hr_1']=request.form['Self_Care_avg_hr_1']
@@ -285,10 +285,6 @@ def submit_agree():
         except: d['Job_searching_total_time_1']=''
         try: d['Job_searching_avg_time_1']=request.form['Job_searching_avg_time_1']
         except: d['Job_searching_avg_time_1']=''
-        try: d['Household_work_total_time_1']=request.form['Household_work_total_time_1']
-        except: d['Household_work_total_time_1']=''
-        try: d['Household_work_avg_time_1']=request.form['Household_work_avg_time_1']
-        except: d['Household_work_avg_time_1']=''
         try: d['Cooking_total_time_1']=request.form['Cooking_total_time_1']
         except: d['Cooking_total_time_1']=''
         try: d['Cooking_avg_time_1']=request.form['Cooking_avg_time_1']
@@ -325,6 +321,10 @@ def submit_agree():
         except: d['Outside_time_total_time_1']=''
         try: d['Outside_time_avg_time_1']=request.form['Outside_time_avg_time_1']
         except: d['Outside_time_avg_time_1']=''
+        try: d['Others_total_time_1']=request.form['Others_total_time_1']
+        except: d['Others_total_time_1']=''
+        try: d['Others_avg_time_1']=request.form['Others_avg_time_1']
+        except: d['Others_avg_time_1']=''
 
 
         try: d['Self_Care_total_hr_2']=request.form['Self_Care_total_hr_2']
@@ -359,10 +359,6 @@ def submit_agree():
         except: d['Job_searching_total_time_2']=''
         try: d['Job_searching_avg_time_2']=request.form['Job_searching_avg_time_2']
         except: d['Job_searching_avg_time_2']=''
-        try: d['Household_work_total_time_2']=request.form['Household_work_total_time_2']
-        except: d['Household_work_total_time_2']=''
-        try: d['Household_work_avg_time_2']=request.form['Household_work_avg_time_2']
-        except: d['Household_work_avg_time_2']=''
         try: d['Cooking_total_time_2']=request.form['Cooking_total_time_2']
         except: d['Cooking_total_time_2']=''
         try: d['Cooking_avg_time_2']=request.form['Cooking_avg_time_2']
@@ -399,6 +395,11 @@ def submit_agree():
         except: d['Outside_time_total_time_2']=''
         try: d['Outside_time_avg_time_2']=request.form['Outside_time_avg_time_2']
         except: d['Outside_time_avg_time_2']=''
+        try: d['Others_total_time_2']=request.form['Others_total_time_2']
+        except: d['Others_total_time_2']=''
+        try: d['Others_avg_time_2']=request.form['Others_avg_time_2']
+        except: d['Others_avg_time_2']=''
+
 
         try: d['Self_Care_total_hr_3']=request.form['Self_Care_total_hr_3']
         except: d['Self_Care_total_hr_3']=''
@@ -432,10 +433,6 @@ def submit_agree():
         except: d['Job_searching_total_time_3']=''
         try: d['Job_searching_avg_time_3']=request.form['Job_searching_avg_time_3']
         except: d['Job_searching_avg_time_3']=''
-        try: d['Household_work_total_time_3']=request.form['Household_work_total_time_3']
-        except: d['Household_work_total_time_3']=''
-        try: d['Household_work_avg_time_3']=request.form['Household_work_avg_time_3']
-        except: d['Household_work_avg_time_3']=''
         try: d['Cooking_total_time_3']=request.form['Cooking_total_time_3']
         except: d['Cooking_total_time_3']=''
         try: d['Cooking_avg_time_3']=request.form['Cooking_avg_time_3']
@@ -472,6 +469,11 @@ def submit_agree():
         except: d['Outside_time_total_time_3']=''
         try: d['Outside_time_avg_time_3']=request.form['Outside_time_avg_time_3']
         except: d['Outside_time_avg_time_3']=''
+        try: d['Others_total_time_3']=request.form['Others_total_time_3']
+        except: d['Others_total_time_3']=''
+        try: d['Others_avg_time_3']=request.form['Others_avg_time_3']
+        except: d['Others_avg_time_3']=''
+
 
 
         try: d['Self_Care_total_hr_4']=request.form['Self_Care_total_hr_4']
@@ -506,10 +508,6 @@ def submit_agree():
         except: d['Job_searching_total_time_4']=''
         try: d['Job_searching_avg_time_4']=request.form['Job_searching_avg_time_4']
         except: d['Job_searching_avg_time_4']=''
-        try: d['Household_work_total_time_4']=request.form['Household_work_total_time_4']
-        except: d['Household_work_total_time_4']=''
-        try: d['Household_work_avg_time_4']=request.form['Household_work_avg_time_4']
-        except: d['Household_work_avg_time_4']=''
         try: d['Cooking_total_time_4']=request.form['Cooking_total_time_4']
         except: d['Cooking_total_time_4']=''
         try: d['Cooking_avg_time_4']=request.form['Cooking_avg_time_4']
@@ -546,6 +544,11 @@ def submit_agree():
         except: d['Outside_time_total_time_4']=''
         try: d['Outside_time_avg_time_4']=request.form['Outside_time_avg_time_4']
         except: d['Outside_time_avg_time_4']=''
+        try: d['Others_total_time_4']=request.form['Others_total_time_4']
+        except: d['Others_total_time_4']=''
+        try: d['Others_avg_time_4']=request.form['Others_avg_time_4']
+        except: d['Others_avg_time_4']=''
+
 
 
         try: d['Self_Care_total_hr_5']=request.form['Self_Care_total_hr_5']
@@ -580,10 +583,6 @@ def submit_agree():
         except: d['Job_searching_total_time_5']=''
         try: d['Job_searching_avg_time_5']=request.form['Job_searching_avg_time_5']
         except: d['Job_searching_avg_time_5']=''
-        try: d['Household_work_total_time_5']=request.form['Household_work_total_time_5']
-        except: d['Household_work_total_time_5']=''
-        try: d['Household_work_avg_time_5']=request.form['Household_work_avg_time_5']
-        except: d['Household_work_avg_time_5']=''
         try: d['Cooking_total_time_5']=request.form['Cooking_total_time_5']
         except: d['Cooking_total_time_5']=''
         try: d['Cooking_avg_time_5']=request.form['Cooking_avg_time_5']
@@ -620,6 +619,11 @@ def submit_agree():
         except: d['Outside_time_total_time_5']=''
         try: d['Outside_time_avg_time_5']=request.form['Outside_time_avg_time_5']
         except: d['Outside_time_avg_time_5']=''
+        try: d['Others_total_time_5']=request.form['Others_total_time_5']
+        except: d['Others_total_time_5']=''
+        try: d['Others_avg_time_5']=request.form['Others_avg_time_5']
+        except: d['Others_avg_time_5']=''
+
 
 
         try: d['Self_Care_total_hr_6']=request.form['Self_Care_total_hr_6']
@@ -654,10 +658,6 @@ def submit_agree():
         except: d['Job_searching_total_time_6']=''
         try: d['Job_searching_avg_time_6']=request.form['Job_searching_avg_time_6']
         except: d['Job_searching_avg_time_6']=''
-        try: d['Household_work_total_time_6']=request.form['Household_work_total_time_6']
-        except: d['Household_work_total_time_6']=''
-        try: d['Household_work_avg_time_6']=request.form['Household_work_avg_time_6']
-        except: d['Household_work_avg_time_6']=''
         try: d['Cooking_total_time_6']=request.form['Cooking_total_time_6']
         except: d['Cooking_total_time_6']=''
         try: d['Cooking_avg_time_6']=request.form['Cooking_avg_time_6']
@@ -694,16 +694,29 @@ def submit_agree():
         except: d['Outside_time_total_time_6']=''
         try: d['Outside_time_avg_time_6']=request.form['Outside_time_avg_time_6']
         except: d['Outside_time_avg_time_6']=''
+        try: d['Others_total_time_6']=request.form['Others_total_time_6']
+        except: d['Others_total_time_6']=''
+        try: d['Others_avg_time_6']=request.form['Others_avg_time_6']
+        except: d['Others_avg_time_6']=''
+
 
         #23
-        d['Preparing_food_activity']=request.form['Preparing_food_activity']
-        d['Cleaning_food_activity']=request.form['Cleaning_food_activity']
-        d['Cleaning_clothes_activity']=request.form['Cleaning_clothes_activity']
-        d['Folding_clothes_activity']=request.form['Folding_clothes_activity']
-        d['Ironing_clothes_activity']=request.form['Ironing_clothes_activity']
-        d['Brooming_activity']=request.form['Brooming_activity']
-        d['Mopping_activity']=request.form['Mopping_activity']
-        d['Children_activity']=request.form['Children_activity']
+        try: d['Preparing_food_activity']=request.form['Preparing_food_activity']
+        except: d['Preparing_food_activity']=''
+        try: d['Cleaning_food_activity']=request.form['Cleaning_food_activity']
+        except: d['Cleaning_food_activity']=''
+        try: d['Cleaning_clothes_activity']=request.form['Cleaning_clothes_activity']
+        except: d['Cleaning_clothes_activity']=''
+        try: d['Folding_clothes_activity']=request.form['Folding_clothes_activity']
+        except: d['Folding_clothes_activity']=''
+        try: d['Ironing_clothes_activity']=request.form['Ironing_clothes_activity']
+        except: d['Ironing_clothes_activity']=''
+        try: d['Brooming_activity']=request.form['Brooming_activity']
+        except: d['Brooming_activity']=''
+        try: d['Mopping_activity']=request.form['Mopping_activity']
+        except: d['Mopping_activity']=''
+        try: d['Children_activity']=request.form['Children_activity']
+        except: d['Children_activity']=''
 
         d['City_town_lockdown']=request.form['City_town_lockdown']
         d['Covid19_duration']=request.form['Covid19_duration']
@@ -894,8 +907,6 @@ def submit_agree():
                      d['Leisure_avg_time_1'],
                      d['Job_searching_total_time_1'],
                      d['Job_searching_avg_time_1'],
-                     d['Household_work_total_time_1'],
-                     d['Household_work_avg_time_1'],
                      d['Cooking_total_time_1'],
                      d['Cooking_avg_time_1'],
                      d['Utensils_clean_total_time_1'],
@@ -913,7 +924,9 @@ def submit_agree():
                      d['Shoping_total_time_1'],
                      d['Shoping_avg_time_1'],
                      d['Outside_time_total_time_1'],
-                     d['Outside_time_avg_time_1']])
+                     d['Outside_time_avg_time_1'],
+                     d['Others_total_time_1'],
+                     d['Others_avg_time_1']])
 
         if No_of_member>=2: insertRow.extend( [ d['Self_Care_total_hr_2'],
                      d['Self_Care_avg_hr_2'],
@@ -931,8 +944,6 @@ def submit_agree():
                      d['Leisure_avg_time_2'],
                      d['Job_searching_total_time_2'],
                      d['Job_searching_avg_time_2'],
-                     d['Household_work_total_time_2'],
-                     d['Household_work_avg_time_2'],
                      d['Cooking_total_time_2'],
                      d['Cooking_avg_time_2'],
                      d['Utensils_clean_total_time_2'],
@@ -950,7 +961,10 @@ def submit_agree():
                      d['Shoping_total_time_2'],
                      d['Shoping_avg_time_2'],
                      d['Outside_time_total_time_2'],
-                     d['Outside_time_avg_time_2']])
+                     d['Outside_time_avg_time_2'],
+                     d['Others_total_time_2'],
+                     d['Others_avg_time_2']])
+
 
 
         if No_of_member>=3: insertRow.extend( [ d['Self_Care_total_hr_3'],
@@ -969,8 +983,6 @@ def submit_agree():
                      d['Leisure_avg_time_3'],
                      d['Job_searching_total_time_3'],
                      d['Job_searching_avg_time_3'],
-                     d['Household_work_total_time_3'],
-                     d['Household_work_avg_time_3'],
                      d['Cooking_total_time_3'],
                      d['Cooking_avg_time_3'],
                      d['Utensils_clean_total_time_3'],
@@ -988,7 +1000,10 @@ def submit_agree():
                      d['Shoping_total_time_3'],
                      d['Shoping_avg_time_3'],
                      d['Outside_time_total_time_3'],
-                     d['Outside_time_avg_time_3']])
+                     d['Outside_time_avg_time_3'],
+                     d['Others_total_time_3'],
+                     d['Others_avg_time_3']])
+
 
 
         if No_of_member>=4: insertRow.extend( [ d['Self_Care_total_hr_4'],
@@ -1007,8 +1022,6 @@ def submit_agree():
                      d['Leisure_avg_time_4'],
                      d['Job_searching_total_time_4'],
                      d['Job_searching_avg_time_4'],
-                     d['Household_work_total_time_4'],
-                     d['Household_work_avg_time_4'],
                      d['Cooking_total_time_4'],
                      d['Cooking_avg_time_4'],
                      d['Utensils_clean_total_time_4'],
@@ -1026,7 +1039,10 @@ def submit_agree():
                      d['Shoping_total_time_4'],
                      d['Shoping_avg_time_4'],
                      d['Outside_time_total_time_4'],
-                     d['Outside_time_avg_time_4']])
+                     d['Outside_time_avg_time_4'],
+                     d['Others_total_time_4'],
+                     d['Others_avg_time_4']])
+
 
 
         if No_of_member>=5: insertRow.extend( [ d['Self_Care_total_hr_5'],
@@ -1045,8 +1061,6 @@ def submit_agree():
                      d['Leisure_avg_time_5'],
                      d['Job_searching_total_time_5'],
                      d['Job_searching_avg_time_5'],
-                     d['Household_work_total_time_5'],
-                     d['Household_work_avg_time_5'],
                      d['Cooking_total_time_5'],
                      d['Cooking_avg_time_5'],
                      d['Utensils_clean_total_time_5'],
@@ -1064,7 +1078,10 @@ def submit_agree():
                      d['Shoping_total_time_5'],
                      d['Shoping_avg_time_5'],
                      d['Outside_time_total_time_5'],
-                     d['Outside_time_avg_time_5']])
+                     d['Outside_time_avg_time_5'],
+                     d['Others_total_time_5'],
+                     d['Others_avg_time_5']])
+
 
 
         if No_of_member>=6: insertRow.extend( [ d['Self_Care_total_hr_6'],
@@ -1083,8 +1100,6 @@ def submit_agree():
                      d['Leisure_avg_time_6'],
                      d['Job_searching_total_time_6'],
                      d['Job_searching_avg_time_6'],
-                     d['Household_work_total_time_6'],
-                     d['Household_work_avg_time_6'],
                      d['Cooking_total_time_6'],
                      d['Cooking_avg_time_6'],
                      d['Utensils_clean_total_time_6'],
@@ -1102,7 +1117,10 @@ def submit_agree():
                      d['Shoping_total_time_6'],
                      d['Shoping_avg_time_6'],
                      d['Outside_time_total_time_6'],
-                     d['Outside_time_avg_time_6']])
+                     d['Outside_time_avg_time_6'],
+                     d['Others_total_time_6'],
+                     d['Others_avg_time_6']])
+
 
 
 
