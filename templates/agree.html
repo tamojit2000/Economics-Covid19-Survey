@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="header" id="myHeader">
-      <h2>A draft questionnaire for Household Survey on Covid-19 Pandemic in India.</h2>
+      <h2>Household Survey on Covid-19 Pandemic in India.</h2>
     </div>
 
 	</br>
@@ -327,7 +327,8 @@
         <tr>
           <td>1</td>
           <td>
-            <select name="Relationship_1" id="Relationship_1" onchange="ScrollRight();">
+            <select required name="Relationship_1" id="Relationship_1" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Self">Self</option>
               <option value="Spouse">Spouse</option>
               <option value="Child">Child</option>
@@ -339,23 +340,26 @@
             </select>
           </td>
           <td>
-            <select class="" name="Respondent_1" id="Respondent_1" onchange="ScrollRight();">
+            <select class="" required name="Respondent_1" id="Respondent_1" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
           <td>
-            <input type="number" min="1" max="120" name="Age_1" id="Age_1" onchange="disableTable21_1(); ScrollRight();"/>
+            <input required type="number" min="1" max="120" name="Age_1" id="Age_1" onchange="disableTable21_1(); ScrollRight();"/>
           </td>
           <td>
-            <select name="Gender_1" id="Gender_1" onchange="ScrollRight();">
+            <select required name="Gender_1" id="Gender_1" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Others">Others</option>
             </select>
           </td>
           <td>
-            <select class="" name="Marital_Status_1" id="Marital_Status_1" onchange="ScrollRight();">
+            <select required class="" name="Marital_Status_1" id="Marital_Status_1" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Married-cohabiting with partner">Married-cohatiting with partner</option>
               <option value="Married - living apart">Married - living apart</option>
               <option value="Single - never married">Single - never married</option>
@@ -366,10 +370,12 @@
             </select>
           </td>
           <td>
-            <select class="" name="Employment_Status_1" id="Employment_Status_1" onchange="disableOccupationIndustry(); ScrollRight();">
+            <select required class="" name="Employment_Status_1" id="Employment_Status_1" onchange="disableOccupationIndustry(); ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Full-time">Full-time</option>
               <option value="Part-time">Part-time</option>
               <option value="Self-Employed">Self-Employed</option>
+              <option value="Homemaker">Homemaker</option>
               <option value="Unemployed">Unemployed</option>
               <option value="Not interested in working">Not interested in working</option>
               <option value="Retiree">Retiree</option>
@@ -378,16 +384,17 @@
             </select>
           </td>
           <td>
-            <input type="text" name="Occupation_1" id="Occupation_1" onchange="ScrollRight();" />
+            <input required type="text" name="Occupation_1" id="Occupation_1" onchange="ScrollRight();" />
 
 
           </td>
           <td>
-            <input type="text" name="Industry_1" id="Industry_1" onchange="ScrollRight();" />
+            <input required type="text" name="Industry_1" id="Industry_1" onchange="ScrollRight();" />
 
           </td>
           <td>
-            <select class="" name="Work_from_home_1" id="Work_from_home_1" onchange="ScrollRight();">
+            <select required class="" name="Work_from_home_1" id="Work_from_home_1" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
               <option value="NA">NA</option>
@@ -395,7 +402,8 @@
           </td>
 
           <td>
-            <select class="" name="Education_1" id="Education_1" onchange="ScrollRight();">
+            <select required class="" name="Education_1" id="Education_1" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Primary or below">Primary or below</option>
               <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
               <option value="Between secondary & including HS">Between secondary & including HS</option>
@@ -404,15 +412,16 @@
             </select>
           </td>
           <td>
-            <select class="" name="Disability_1" id="Disability_1" onchange="ScrollRight();">
-
+            <select required class="" name="Disability_1" id="Disability_1" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
           </td>
 
           <td>
-            <select class="" name="Member_in_household_1" id="Member_in_household_1" onchange="ScrollRight();">
+            <select required class="" name="Member_in_household_1" id="Member_in_household_1" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Never">Never</option>
               <option value="Rarely">Rarely</option>
               <option value="Regularly">Regularly</option>
@@ -420,7 +429,8 @@
             </select>
           </td>
           <td>
-            <select class="" name="Temporary_in_household_1" id="Temporary_in_household_1" onchange="ScrollLeft();">
+            <select required class="" name="Temporary_in_household_1" id="Temporary_in_household_1" onchange="ScrollLeft();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -433,7 +443,8 @@
         <tr>
           <td>2</td>
           <td>
-            <select name="Relationship_2" id="Relationship_2" onchange="ScrollRight();">
+            <select required name="Relationship_2" id="Relationship_2" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Self">Self</option>
               <option value="Spouse">Spouse</option>
               <option value="Child">Child</option>
@@ -445,23 +456,26 @@
             </select>
           </td>
           <td>
-            <select class="" name="Respondent_2" id="Respondent_2" onchange="ScrollRight();">
+            <select required class="" name="Respondent_2" id="Respondent_2" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
           <td>
-            <input type="number" min="1" max="120" name="Age_2" id="Age_2" onchange="disableTable21_2(); ScrollRight();" />
+            <input required type="number" min="1" max="120" name="Age_2" id="Age_2" onchange="disableTable21_2(); ScrollRight();" />
           </td>
           <td>
-            <select name="Gender_2" id="Gender_2" onchange="ScrollRight();">
+            <select required name="Gender_2" id="Gender_2" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Others">Others</option>
             </select>
           </td>
           <td>
-            <select class="" name="Marital_Status_2" id="Marital_Status_2" onchange="ScrollRight();">
+            <select required class="" name="Marital_Status_2" id="Marital_Status_2" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Married-cohabiting with partner">Married-cohatiting with partner</option>
               <option value="Married - living apart">Married - living apart</option>
               <option value="Single - never married">Single - never married</option>
@@ -472,10 +486,12 @@
             </select>
           </td>
           <td>
-            <select class="" name="Employment_Status_2" id="Employment_Status_2" onchange="disableOccupationIndustry(); ScrollRight();">
+            <select required class="" name="Employment_Status_2" id="Employment_Status_2" onchange="disableOccupationIndustry(); ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Full-time">Full-time</option>
               <option value="Part-time">Part-time</option>
               <option value="Self-Employed">Self-Employed</option>
+              <option value="Homemaker">Homemaker</option>
               <option value="Unemployed">Unemployed</option>
               <option value="Not interested in working">Not interested in working</option>
               <option value="Retiree">Retiree</option>
@@ -484,18 +500,19 @@
             </select>
           </td>
           <td>
-            <input type="text" name="Occupation_2" id="Occupation_2" onchange="ScrollRight();" />
+            <input required type="text" name="Occupation_2" id="Occupation_2" onchange="ScrollRight();" />
 
 
 
           </td>
           <td>
-            <input type="text" name="Industry_2" id="Industry_2" onchange="ScrollRight();" />
+            <input required type="text" name="Industry_2" id="Industry_2" onchange="ScrollRight();" />
 
 
           </td>
           <td>
-            <select class="" name="Work_from_home_2" id="Work_from_home_2" onchange="ScrollRight();">
+            <select required class="" name="Work_from_home_2" id="Work_from_home_2" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
               <option value="NA">NA</option>
@@ -503,7 +520,8 @@
           </td>
 
           <td>
-            <select class="" name="Education_2" id="Education_2" onchange="ScrollRight();">
+            <select required class="" name="Education_2" id="Education_2" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Primary or below">Primary or below</option>
               <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
               <option value="Between secondary & including HS">Between secondary & including HS</option>
@@ -512,15 +530,16 @@
             </select>
           </td>
           <td>
-            <select class="" name="Disability_2" id="Disability_2" onchange="ScrollRight();">
-
+            <select required class="" name="Disability_2" id="Disability_2" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
           </td>
 
           <td>
-            <select class="" name="Member_in_household_2" id="Member_in_household_2" onchange="ScrollRight();">
+            <select required class="" name="Member_in_household_2" id="Member_in_household_2" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Never">Never</option>
               <option value="Rarely">Rarely</option>
               <option value="Regularly">Regularly</option>
@@ -528,7 +547,8 @@
             </select>
           </td>
           <td>
-            <select class="" name="Temporary_in_household_2" id="Temporary_in_household_2" onchange="ScrollLeft();">
+            <select required class="" name="Temporary_in_household_2" id="Temporary_in_household_2" onchange="ScrollLeft();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -541,7 +561,8 @@
         <tr>
           <td>3</td>
             <td>
-            <select name="Relationship_3" id="Relationship_3" onchange="ScrollRight();">
+            <select required name="Relationship_3" id="Relationship_3" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Self">Self</option>
               <option value="Spouse">Spouse</option>
               <option value="Child">Child</option>
@@ -553,23 +574,26 @@
             </select>
           </td>
           <td>
-            <select class="" name="Respondent_3" id="Respondent_3" onchange="ScrollRight();">
+            <select required class="" name="Respondent_3" id="Respondent_3" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
           <td>
-            <input type="number" min="1" max="120" name="Age_3" id="Age_3" onchange="disableTable21_3(); ScrollRight();" />
+            <input required type="number" min="1" max="120" name="Age_3" id="Age_3" onchange="disableTable21_3(); ScrollRight();" />
           </td>
           <td>
-            <select name="Gender_3" id="Gender_3" onchange="ScrollRight();">
+            <select required name="Gender_3" id="Gender_3" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Others">Others</option>
             </select>
           </td>
           <td>
-            <select class="" name="Marital_Status_3" id="Marital_Status_3" onchange="ScrollRight();">
+            <select required class="" name="Marital_Status_3" id="Marital_Status_3" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Married-cohabiting with partner">Married-cohatiting with partner</option>
               <option value="Married - living apart">Married - living apart</option>
               <option value="Single - never married">Single - never married</option>
@@ -580,10 +604,12 @@
             </select>
           </td>
           <td>
-            <select class="" name="Employment_Status_3" id="Employment_Status_3" onchange="disableOccupationIndustry(); ScrollRight();">
+            <select required class="" name="Employment_Status_3" id="Employment_Status_3" onchange="disableOccupationIndustry(); ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Full-time">Full-time</option>
               <option value="Part-time">Part-time</option>
               <option value="Self-Employed">Self-Employed</option>
+              <option value="Homemaker">Homemaker</option>
               <option value="Unemployed">Unemployed</option>
               <option value="Not interested in working">Not interested in working</option>
               <option value="Retiree">Retiree</option>
@@ -592,18 +618,19 @@
             </select>
           </td>
           <td>
-            <input type="text" name="Occupation_3" id="Occupation_3" onchange="ScrollRight();"/>
+            <input required type="text" name="Occupation_3" id="Occupation_3" onchange="ScrollRight();"/>
 
 
 
           </td>
           <td>
-            <input type="text" name="Industry_3" id="Industry_3" onchange="ScrollRight();"/>
+            <input required type="text" name="Industry_3" id="Industry_3" onchange="ScrollRight();"/>
 
 
           </td>
           <td>
-            <select class="" name="Work_from_home_3" id="Work_from_home_3" onchange="ScrollRight();">
+            <select required class="" name="Work_from_home_3" id="Work_from_home_3" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
               <option value="NA">NA</option>
@@ -611,7 +638,8 @@
           </td>
 
           <td>
-            <select class="" name="Education_3" id="Education_3" onchange="ScrollRight();">
+            <select required class="" name="Education_3" id="Education_3" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Primary or below">Primary or below</option>
               <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
               <option value="Between secondary & including HS">Between secondary & including HS</option>
@@ -620,15 +648,16 @@
             </select>
           </td>
           <td>
-            <select class="" name="Disability_3" id="Disability_3" onchange="ScrollRight();">
-
+            <select required class="" name="Disability_3" id="Disability_3" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
           </td>
 
           <td>
-            <select class="" name="Member_in_household_3" id="Member_in_household_3" onchange="ScrollRight();">
+            <select required class="" name="Member_in_household_3" id="Member_in_household_3" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Never">Never</option>
               <option value="Rarely">Rarely</option>
               <option value="Regularly">Regularly</option>
@@ -636,7 +665,8 @@
             </select>
           </td>
           <td>
-            <select class="" name="Temporary_in_household_3" id="Temporary_in_household_3" onchange="ScrollLeft();">
+            <select required class="" name="Temporary_in_household_3" id="Temporary_in_household_3" onchange="ScrollLeft();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -649,7 +679,8 @@
         <tr>
           <td>4</td>
           <td>
-            <select name="Relationship_4" id="Relationship_4" onchange="ScrollRight();">
+            <select required name="Relationship_4" id="Relationship_4" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Self">Self</option>
               <option value="Spouse">Spouse</option>
               <option value="Child">Child</option>
@@ -661,24 +692,27 @@
             </select>
           </td>
           <td>
-            <select class="" name="Respondent_4" id="Respondent_4" onchange="ScrollRight();">
+            <select required class="" name="Respondent_4" id="Respondent_4" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
 
           <td>
-            <input type="number" min="1" max="120" name="Age_4" id="Age_4" onchange="disableTable21_4(); ScrollRight();" />
+            <input required type="number" min="1" max="120" name="Age_4" id="Age_4" onchange="disableTable21_4(); ScrollRight();" />
           </td>
           <td>
-            <select name="Gender_4" id="Gender_4" onchange="ScrollRight();">
+            <select required name="Gender_4" id="Gender_4" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Others">Others</option>
             </select>
           </td>
           <td>
-            <select class="" name="Marital_Status_4" id="Marital_Status_4" onchange="ScrollRight();">
+            <select required class="" name="Marital_Status_4" id="Marital_Status_4" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Married-cohabiting with partner">Married-cohatiting with partner</option>
               <option value="Married - living apart">Married - living apart</option>
               <option value="Single - never married">Single - never married</option>
@@ -689,10 +723,12 @@
             </select>
           </td>
           <td>
-            <select class="" name="Employment_Status_4" id="Employment_Status_4" onchange="disableOccupationIndustry(); ScrollRight();" >
+            <select required class="" name="Employment_Status_4" id="Employment_Status_4" onchange="disableOccupationIndustry(); ScrollRight();" >
+              <option disabled selected value>--select option</option>
               <option value="Full-time">Full-time</option>
               <option value="Part-time">Part-time</option>
               <option value="Self-Employed">Self-Employed</option>
+              <option value="Homemaker">Homemaker</option>
               <option value="Unemployed">Unemployed</option>
               <option value="Not interested in working">Not interested in working</option>
               <option value="Retiree">Retiree</option>
@@ -701,18 +737,19 @@
             </select>
           </td>
           <td>
-            <input type="text" name="Occupation_4" id="Occupation_4" onchange="ScrollRight();" />
+            <input required type="text" name="Occupation_4" id="Occupation_4" onchange="ScrollRight();" />
 
 
 
           </td>
           <td>
-            <input type="text" name="Industry_4" id="Industry_4" onchange="ScrollRight();"/>
+            <input required type="text" name="Industry_4" id="Industry_4" onchange="ScrollRight();"/>
 
 
           </td>
           <td>
-            <select class="" name="Work_from_home_4" id="Work_from_home_4" onchange="ScrollRight();">
+            <select required class="" name="Work_from_home_4" id="Work_from_home_4" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
               <option value="NA">NA</option>
@@ -720,7 +757,8 @@
           </td>
 
           <td>
-            <select class="" name="Education_4" id="Education_4" onchange="ScrollRight();">
+            <select required class="" name="Education_4" id="Education_4" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Primary or below">Primary or below</option>
               <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
               <option value="Between secondary & including HS">Between secondary & including HS</option>
@@ -729,15 +767,16 @@
             </select>
           </td>
           <td>
-            <select class="" name="Disability_4" id="Disability_4" onchange="ScrollRight();">
-
+            <select required class="" name="Disability_4" id="Disability_4" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
           </td>
 
           <td>
-            <select class="" name="Member_in_household_4" id="Member_in_household_4" onchange="ScrollRight();">
+            <select required class="" name="Member_in_household_4" id="Member_in_household_4" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Never">Never</option>
               <option value="Rarely">Rarely</option>
               <option value="Regularly">Regularly</option>
@@ -745,7 +784,8 @@
             </select>
           </td>
           <td>
-            <select class="" name="Temporary_in_household_4" id="Temporary_in_household_4" onchange="ScrollLeft();">
+            <select required class="" name="Temporary_in_household_4" id="Temporary_in_household_4" onchange="ScrollLeft();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -758,7 +798,8 @@
         <tr>
           <td>5</td>
           <td>
-            <select name="Relationship_5" id="Relationship_5" onchange="ScrollRight();">
+            <select required name="Relationship_5" id="Relationship_5" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Self">Self</option>
               <option value="Spouse">Spouse</option>
               <option value="Child">Child</option>
@@ -770,24 +811,27 @@
             </select>
           </td>
           <td>
-            <select class="" name="Respondent_5" id="Respondent_5" onchange="ScrollRight();">
+            <select required class="" name="Respondent_5" id="Respondent_5" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
 
           <td>
-            <input type="number" min="1" max="120" name="Age_5" id="Age_5" onchange="disableTable21_5(); ScrollRight();" />
+            <input required type="number" min="1" max="120" name="Age_5" id="Age_5" onchange="disableTable21_5(); ScrollRight();" />
           </td>
           <td>
-            <select name="Gender_5" id="Gender_5" onchange="ScrollRight();">
+            <select required name="Gender_5" id="Gender_5" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Others">Others</option>
             </select>
           </td>
           <td>
-            <select class="" name="Marital_Status_5" id="Marital_Status_5" onchange="ScrollRight();">
+            <select required class="" name="Marital_Status_5" id="Marital_Status_5" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Married-cohabiting with partner">Married-cohatiting with partner</option>
               <option value="Married - living apart">Married - living apart</option>
               <option value="Single - never married">Single - never married</option>
@@ -798,10 +842,12 @@
             </select>
           </td>
           <td>
-            <select class="" name="Employment_Status_5" id="Employment_Status_5" onchange="disableOccupationIndustry(); ScrollRight();">
+            <select required class="" name="Employment_Status_5" id="Employment_Status_5" onchange="disableOccupationIndustry(); ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Full-time">Full-time</option>
               <option value="Part-time">Part-time</option>
               <option value="Self-Employed">Self-Employed</option>
+              <option value="Homemaker">Homemaker</option>
               <option value="Unemployed">Unemployed</option>
               <option value="Not interested in working">Not interested in working</option>
               <option value="Retiree">Retiree</option>
@@ -810,18 +856,19 @@
             </select>
           </td>
           <td>
-            <input type="text" name="Occupation_5" id="Occupation_5" onchange="ScrollRight();"/>
+            <input required type="text" name="Occupation_5" id="Occupation_5" onchange="ScrollRight();"/>
 
 
 
           </td>
           <td>
-            <input type="text" name="Industry_5" id="Industry_5" onchange="ScrollRight();"/>
+            <input required type="text" name="Industry_5" id="Industry_5" onchange="ScrollRight();"/>
 
 
           </td>
           <td>
-            <select class="" name="Work_from_home_5" id="Work_from_home_5" onchange="ScrollRight();">
+            <select required class="" name="Work_from_home_5" id="Work_from_home_5" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
               <option value="NA">NA</option>
@@ -829,7 +876,8 @@
           </td>
 
           <td>
-            <select class="" name="Education_5" id="Education_5" onchange="ScrollRight();">
+            <select required class="" name="Education_5" id="Education_5" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Primary or below">Primary or below</option>
               <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
               <option value="Between secondary & including HS">Between secondary & including HS</option>
@@ -838,22 +886,24 @@
             </select>
           </td>
           <td>
-            <select class="" name="Disability_5" id="Disability_5" onchange="ScrollRight();">
-
+            <select required class="" name="Disability_5" id="Disability_5" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
           </td>
 
           <td>
-            <select class="" name="Member_in_household_5" id="Member_in_household_5" onchange="ScrollRight();">
+            <select required class="" name="Member_in_household_5" id="Member_in_household_5" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Never">Never</option>
               <option value="Rarely">Rarely</option>
               <option value="Regularly">Regularly</option>
               <option value="NA">NA</option>            </select>
           </td>
           <td>
-            <select class="" name="Temporary_in_household_5" id="Temporary_in_household_5" onchange="ScrollLeft();">
+            <select required class="" name="Temporary_in_household_5" id="Temporary_in_household_5" onchange="ScrollLeft();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -865,7 +915,8 @@
         <tr>
           <td>6</td>
           <td>
-            <select name="Relationship_6" id="Relationship_6" onchange="ScrollRight();">
+            <select required name="Relationship_6" id="Relationship_6" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Self">Self</option>
               <option value="Spouse">Spouse</option>
               <option value="Child">Child</option>
@@ -877,24 +928,27 @@
             </select>
           </td>
           <td>
-            <select class="" name="Respondent_6" id="Respondent_6" onchange="ScrollRight();">
+            <select required class="" name="Respondent_6" id="Respondent_6" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </td>
 
           <td>
-            <input type="number" min="1" max="120" name="Age_6" id="Age_6" onchange="disableTable21_6(); ScrollRight();" />
+            <input required type="number" min="1" max="120" name="Age_6" id="Age_6" onchange="disableTable21_6(); ScrollRight();" />
           </td>
           <td>
-            <select name="Gender_6" id="Gender_6" onchange="ScrollRight();">
+            <select required name="Gender_6" id="Gender_6" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Others">Others</option>
             </select>
           </td>
           <td>
-            <select class="" name="Marital_Status_6" id="Marital_Status_6" onchange="ScrollRight();">
+            <select required class="" name="Marital_Status_6" id="Marital_Status_6" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Married-cohabiting with partner">Married-cohatiting with partner</option>
               <option value="Married - living apart">Married - living apart</option>
               <option value="Single - never married">Single - never married</option>
@@ -905,10 +959,12 @@
             </select>
           </td>
           <td>
-            <select class="" name="Employment_Status_6" id="Employment_Status_6" onchange="disableOccupationIndustry(); ScrollRight();">
+            <select required class="" name="Employment_Status_6" id="Employment_Status_6" onchange="disableOccupationIndustry(); ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Full-time">Full-time</option>
               <option value="Part-time">Part-time</option>
               <option value="Self-Employed">Self-Employed</option>
+              <option value="Homemaker">Homemaker</option>
               <option value="Unemployed">Unemployed</option>
               <option value="Not interested in working">Not interested in working</option>
               <option value="Retiree">Retiree</option>
@@ -917,18 +973,19 @@
             </select>
           </td>
           <td>
-            <input type="text" name="Occupation_6" id="Occupation_6" onchange="ScrollRight();"/>
+            <input required type="text" name="Occupation_6" id="Occupation_6" onchange="ScrollRight();"/>
 
 
 
           </td>
           <td>
-            <input type="text" name="Industry_6" id="Industry_6" onchange="ScrollRight();"/>
+            <input required type="text" name="Industry_6" id="Industry_6" onchange="ScrollRight();"/>
 
 
           </td>
           <td>
-            <select class="" name="Work_from_home_6" id="Work_from_home_6" onchange="ScrollRight();">
+            <select required class="" name="Work_from_home_6" id="Work_from_home_6" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
               <option value="NA">NA</option>
@@ -936,7 +993,8 @@
           </td>
 
           <td>
-            <select class="" name="Education_6" id="Education_6" onchange="ScrollRight();">
+            <select required class="" name="Education_6" id="Education_6" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Primary or below">Primary or below</option>
               <option value="Between primary & (including) secondary">Between primary & (including) secondary</option>
               <option value="Between secondary & including HS">Between secondary & including HS</option>
@@ -945,14 +1003,15 @@
             </select>
           </td>
           <td>
-            <select class="" name="Disability_6" id="Disability_6" onchange="ScrollRight();">
-
+            <select required class="" name="Disability_6" id="Disability_6" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="No">No</option>
               <option value="Yes">Yes</option>
             </select>
           </td>
           <td>
-            <select class="" name="Member_in_household_6" id="Member_in_household_6" onchange="ScrollRight();">
+            <select required class="" name="Member_in_household_6" id="Member_in_household_6" onchange="ScrollRight();">
+              <option disabled selected value>--select option</option>
               <option value="Never">Never</option>
               <option value="Rarely">Rarely</option>
               <option value="Regularly">Regularly</option>
@@ -960,7 +1019,8 @@
             </select>
           </td>
           <td>
-            <select class="" name="Temporary_in_household_6" id="Temporary_in_household_6" onchange="ScrollLeft();">
+            <select required class="" name="Temporary_in_household_6" id="Temporary_in_household_6" onchange="ScrollLeft();">
+              <option disabled selected value>--select option</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
@@ -976,14 +1036,14 @@
     <div class="section">
       <label><B>19.</B> Now, we are interested in how each adult member (as indicated by you in the previous table) of the household spent their time on the last full workday of the week (Monday – Friday).
         <ul>
-          <li> Fill this for all these members: note that member 1 in the previous table is again Member 1 here, Member 2 in the previous table is again the Member 2 here and so on.</li>
-          <li> Tables for non-adults need not be filled and have automatically been deactivated.</li>
+          <li>Fill this for all these members: note that member 1 in the previous table is again Member 1 here, Member 2 in the previous table is again the Member 2 here and so on.</li>
+          <li>Tables for non-adults need not be filled and have automatically been deactivated.</li>
           <li>If you are filling this on a Sunday, consider the last Friday.</li>
-          <li> For each activity, please fill in the number of hours spent on each activity.</li>
-          <li> You can enter minutes or hours.</li>
-          <li> For tasks not performed or lasting less than 10 minutes, please enter 0. As an example, for 15 minutes, you may enter 15, or 0.25.</li>
-          <li> Try your best to ensure that the total time spent on tasks comes to at least 24 hours.</li>
-          <li> If you did not spend time on an activity on the day specified, but spent time on the task on some other day of the week, you may optionally fill in the next column titled “Avg. time spent.”</li>
+          <li>For each activity, please fill in the number of hours spent on each activity.</li>
+          <li>For tasks not performed or lasting less than 10 minutes, please enter 0.</li>
+          <li>•	Please enter time in terms of number of hours. As an example, for 15 minutes, please 0.25, for 30 mins, please enter 0.5, for 45 mins, please enter 0.75 etc.</li>
+          <li>Try your best to ensure that the total time spent on tasks comes to at least 24 hours.</li>
+          <li>If you did not spend time on an activity on the day specified, but spent time on the task on some other day of the week, you may optionally fill in the next column titled “Avg. time spent.”</li>
         </ul>
         </label>
     </br></br>
@@ -1016,7 +1076,7 @@
         </tr>
 
         <tr>
-          <td>Work</td>
+          <td>Employed/Professional Work</td>
           <td>
             <input type="number" required step="0.01" min="0.00" name="Work_total_time_1" id="Work_total_time_1" onchange="calculateTotal_1();"/>
           </td>
@@ -1236,7 +1296,7 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         </tr>
 
         <tr>
-          <td>Work</td>
+          <td>Employed/Professional Work</td>
           <td>
             <input type="number" required step="0.01" min="0.00" name="Work_total_time_2" id="Work_total_time_2" onchange="calculateTotal_2();"/>
           </td>
@@ -1455,7 +1515,7 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         </tr>
 
         <tr>
-          <td>Work</td>
+          <td>Employed/Professional Work</td>
           <td>
             <input type="number" required step="0.01" min="0.00" name="Work_total_time_3" id="Work_total_time_3" onchange="calculateTotal_3();"/>
           </td>
@@ -1672,7 +1732,7 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
         </tr>
 
         <tr>
-          <td>Work</td>
+          <td>Employed/Professional Work</td>
           <td>
             <input type="number" required step="0.01" min="0.00" name="Work_total_time_4" id="Work_total_time_4" onchange="calculateTotal_4();"/>
           </td>
@@ -1889,7 +1949,7 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
           </tr>
 
           <tr>
-            <td>Work</td>
+            <td>Employed/Professional Work</td>
             <td>
               <input type="number" required step="0.01" min="0.00" name="Work_total_time_5" id="Work_total_time_5" onchange="calculateTotal_5();"/>
             </td>
@@ -2107,7 +2167,7 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
           </tr>
 
           <tr>
-            <td>Work</td>
+            <td>Employed/Professional Work</td>
             <td>
               <input type="number" required step="0.01" min="0.00" name="Work_total_time_6" id="Work_total_time_6" onchange="calculateTotal_6();"/>
             </td>
@@ -2429,7 +2489,7 @@ Internet surfing, watching television, Leisure reading (newspapers, fiction, non
     </div>
 
     <div class="section">
-      <label><B>26.</B> How is your family preparing financially for the aftereffects of the COVID-19 crisis? (Check all that apply)</label></br>
+      <label><B>26.</B> How is your family coping financially with the ongoing COVID-19 crisis? (Check all that apply)</label></br>
       <input type="checkbox" name="Covid19_after_effects" value="By taking personal loans"> <label>By taking personal loans</label></br>
       <input type="checkbox" name="Covid19_after_effects" value="By withdrawing money from our savings account"> <label>By withdrawing money from our savings account</label></br>
       <input type="checkbox" name="Covid19_after_effects" value="By withdrawing money from the provident fund"> <label>By withdrawing money from the provident fund</label></br>
